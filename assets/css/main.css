@@ -1,0 +1,24 @@
+
+.navbar-area #MenuBarLogo {
+  display: none;
+}
+
+.navbar-area.is-sticky a.navbar-brand {
+  padding: 0 10px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.navbar-area.is-sticky #MenuBarLogo {
+  display: block;
+}
+
+.gallery-content .single-category-box{
+  border: #fff 2px solid;
+}
+
+
+.gallery-content .single-category-box::before{
+  opacity: 0 !important;
+}

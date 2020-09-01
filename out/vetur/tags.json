@@ -1,0 +1,182 @@
+{
+  "Logo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "LazyLogo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "OrderItem": {
+    "description": "Auto imported from components/admin/OrderItem.vue"
+  },
+  "LazyOrderItem": {
+    "description": "Auto imported from components/admin/OrderItem.vue"
+  },
+  "OrderPerson": {
+    "description": "Auto imported from components/admin/OrderPerson.vue"
+  },
+  "LazyOrderPerson": {
+    "description": "Auto imported from components/admin/OrderPerson.vue"
+  },
+  "Sidebar": {
+    "description": "Auto imported from components/admin/Sidebar.vue"
+  },
+  "LazySidebar": {
+    "description": "Auto imported from components/admin/Sidebar.vue"
+  },
+  "AllProducts": {
+    "description": "Auto imported from components/all-products/AllProducts.vue"
+  },
+  "LazyAllProducts": {
+    "description": "Auto imported from components/all-products/AllProducts.vue"
+  },
+  "CartItems": {
+    "description": "Auto imported from components/cart/CartItems.vue"
+  },
+  "LazyCartItems": {
+    "description": "Auto imported from components/cart/CartItems.vue"
+  },
+  "CheckoutItem": {
+    "description": "Auto imported from components/cart/CheckoutItem.vue"
+  },
+  "LazyCheckoutItem": {
+    "description": "Auto imported from components/cart/CheckoutItem.vue"
+  },
+  "InstagramPhotos": {
+    "description": "Auto imported from components/common/InstagramPhotos.vue"
+  },
+  "LazyInstagramPhotos": {
+    "description": "Auto imported from components/common/InstagramPhotos.vue"
+  },
+  "Loader": {
+    "description": "Auto imported from components/common/Loader.vue"
+  },
+  "LazyLoader": {
+    "description": "Auto imported from components/common/Loader.vue"
+  },
+  "Partner": {
+    "description": "Auto imported from components/common/Partner.vue"
+  },
+  "LazyPartner": {
+    "description": "Auto imported from components/common/Partner.vue"
+  },
+  "Subscribe": {
+    "description": "Auto imported from components/common/Subscribe.vue"
+  },
+  "LazySubscribe": {
+    "description": "Auto imported from components/common/Subscribe.vue"
+  },
+  "Banner": {
+    "description": "Auto imported from components/diction-three/Banner.vue"
+  },
+  "LazyBanner": {
+    "description": "Auto imported from components/diction-three/Banner.vue"
+  },
+  "Category": {
+    "description": "Auto imported from components/diction-three/Category.vue"
+  },
+  "LazyCategory": {
+    "description": "Auto imported from components/diction-three/Category.vue"
+  },
+  "Offer": {
+    "description": "Auto imported from components/diction-three/Offer.vue"
+  },
+  "LazyOffer": {
+    "description": "Auto imported from components/diction-three/Offer.vue"
+  },
+  "BestSellers": {
+    "description": "Auto imported from components/diction-two/BestSellers.vue"
+  },
+  "LazyBestSellers": {
+    "description": "Auto imported from components/diction-two/BestSellers.vue"
+  },
+  "Facility": {
+    "description": "Auto imported from components/diction-two/Facility.vue"
+  },
+  "LazyFacility": {
+    "description": "Auto imported from components/diction-two/Facility.vue"
+  },
+  "News": {
+    "description": "Auto imported from components/diction-two/News.vue"
+  },
+  "LazyNews": {
+    "description": "Auto imported from components/diction-two/News.vue"
+  },
+  "TrendingProducts": {
+    "description": "Auto imported from components/diction-two/TrendingProducts.vue"
+  },
+  "LazyTrendingProducts": {
+    "description": "Auto imported from components/diction-two/TrendingProducts.vue"
+  },
+  "Features": {
+    "description": "Auto imported from components/landing-one/Features.vue"
+  },
+  "LazyFeatures": {
+    "description": "Auto imported from components/landing-one/Features.vue"
+  },
+  "Gallery": {
+    "description": "Auto imported from components/landing-one/Gallery.vue"
+  },
+  "LazyGallery": {
+    "description": "Auto imported from components/landing-one/Gallery.vue"
+  },
+  "LatestProducts": {
+    "description": "Auto imported from components/landing-one/LatestProducts.vue"
+  },
+  "LazyLatestProducts": {
+    "description": "Auto imported from components/landing-one/LatestProducts.vue"
+  },
+  "Partners": {
+    "description": "Auto imported from components/landing-one/Partners.vue"
+  },
+  "LazyPartners": {
+    "description": "Auto imported from components/landing-one/Partners.vue"
+  },
+  "ProductItem": {
+    "description": "Auto imported from components/landing-one/ProductItem.vue"
+  },
+  "LazyProductItem": {
+    "description": "Auto imported from components/landing-one/ProductItem.vue"
+  },
+  "Testimonials": {
+    "description": "Auto imported from components/landing-one/Testimonials.vue"
+  },
+  "LazyTestimonials": {
+    "description": "Auto imported from components/landing-one/Testimonials.vue"
+  },
+  "Timer": {
+    "description": "Auto imported from components/landing-one/Timer.vue"
+  },
+  "LazyTimer": {
+    "description": "Auto imported from components/landing-one/Timer.vue"
+  },
+  "Details": {
+    "description": "Auto imported from components/products/Details.vue"
+  },
+  "LazyDetails": {
+    "description": "Auto imported from components/products/Details.vue"
+  },
+  "DetailsInfo": {
+    "description": "Auto imported from components/products/DetailsInfo.vue"
+  },
+  "LazyDetailsInfo": {
+    "description": "Auto imported from components/products/DetailsInfo.vue"
+  },
+  "ProductImages": {
+    "description": "Auto imported from components/products/ProductImages.vue"
+  },
+  "LazyProductImages": {
+    "description": "Auto imported from components/products/ProductImages.vue"
+  },
+  "RelatedProducts": {
+    "description": "Auto imported from components/products/RelatedProducts.vue"
+  },
+  "LazyRelatedProducts": {
+    "description": "Auto imported from components/products/RelatedProducts.vue"
+  },
+  "QuckView": {
+    "description": "Auto imported from components/modals/QuckView.vue"
+  },
+  "LazyQuckView": {
+    "description": "Auto imported from components/modals/QuckView.vue"
+  }
+}

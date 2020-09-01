@@ -1,0 +1,100 @@
+[
+  {
+    "name": "admin",
+    "path": "/admin",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\admin.vue",
+    "chunkName": "pages/admin",
+    "_name": "_052c1c04"
+  },
+  {
+    "name": "blog-details",
+    "path": "/blog-details",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\blog-details.vue",
+    "chunkName": "pages/blog-details",
+    "_name": "_6181d1f2"
+  },
+  {
+    "name": "blog-one",
+    "path": "/blog-one",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\blog-one.vue",
+    "chunkName": "pages/blog-one",
+    "_name": "_569aa816"
+  },
+  {
+    "name": "cart",
+    "path": "/cart",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\cart.vue",
+    "chunkName": "pages/cart",
+    "_name": "_1939507b"
+  },
+  {
+    "name": "checkout",
+    "path": "/checkout",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\checkout.vue",
+    "chunkName": "pages/checkout",
+    "_name": "_64178621"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_6e090dd6"
+  },
+  {
+    "name": "diction-three",
+    "path": "/diction-three",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\diction-three.vue",
+    "chunkName": "pages/diction-three",
+    "_name": "_f4216350"
+  },
+  {
+    "name": "diction-two",
+    "path": "/diction-two",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\diction-two.vue",
+    "chunkName": "pages/diction-two",
+    "_name": "_20224486"
+  },
+  {
+    "name": "gallery-one",
+    "path": "/gallery-one",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\gallery-one.vue",
+    "chunkName": "pages/gallery-one",
+    "_name": "_13a6e260"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_c53729c4"
+  },
+  {
+    "name": "products",
+    "path": "/products",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\products.vue",
+    "chunkName": "pages/products",
+    "_name": "_4a6ccb3f"
+  },
+  {
+    "name": "signup",
+    "path": "/signup",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\signup.vue",
+    "chunkName": "pages/signup",
+    "_name": "_5b82e5b3"
+  },
+  {
+    "name": "products-details-id",
+    "path": "/products-details/:id?",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\products-details\\\\_id.vue",
+    "chunkName": "pages/products-details/_id",
+    "_name": "_10caae94"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\itp\\\\web\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_58866ff2"
+  }
+]
