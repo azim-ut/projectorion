@@ -1,7 +1,7 @@
 <template>
   <!-- Start Category Products Area -->
   <section class="category-products-area pb-60">
-    <div class="container">
+    <div class="container" style="min-height: 100vh;">
       <div class="row">
 
         <div class="col-6">
@@ -28,7 +28,7 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-sm-4">
+            <div class="col-lg-4 col-sm-4">
               <div class="single-category-box">
                 <img src="../../assets/img/logo/logo_eae.png" alt="image">
 
@@ -39,7 +39,7 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-sm-4">
+            <div class="col-lg-4 col-sm-4">
               <div class="single-category-box">
                 <img src="../../assets/img/logo/logo_dkc.png" alt="image">
 
@@ -50,7 +50,7 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-sm-4">
+            <div class="col-lg-4 col-sm-4">
               <div class="single-category-box">
                 <img src="../../assets/img/logo/logo_abb.svg.png" alt="image">
 
@@ -61,7 +61,7 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-sm-4">
+            <div class="col-lg-4 col-sm-4">
               <div class="single-category-box">
                 <img src="../../assets/img/logo/logo_legrand.png" alt="image">
 
@@ -72,7 +72,7 @@
               </div>
             </div>
 
-            <div class="col-lg-3 col-sm-4">
+            <div class="col-lg-4 col-sm-4">
               <div class="single-category-box">
                 <img src="../../assets/img/logo/logo_siemens.png" alt="image">
 

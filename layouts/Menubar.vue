@@ -19,7 +19,15 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <nuxt-link to="/#" class="nav-link">Объекты</nuxt-link>
+                                    <nuxt-link to="/#" class="nav-link">Клиенты</nuxt-link>
+                                </li>
+
+                                <li class="nav-item">
+                                    <nuxt-link to="/#" class="nav-link">Галлерея</nuxt-link>
+                                </li>
+
+                                <li class="nav-item">
+                                    <nuxt-link to="/#" class="nav-link">Партнеры</nuxt-link>
                                 </li>
 
                                 <li class="nav-item">

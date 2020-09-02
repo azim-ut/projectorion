@@ -2,7 +2,7 @@
   <client-only>
     <!-- Start News Area -->
     <section class="news-area">
-      <div class="container">
+      <div class="container" style="min-height: 100vh;">
         <br/>
         <h3 class="text-center">Среди наших заказчики на сегодня</h3>
         <br/>

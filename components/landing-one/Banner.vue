@@ -1,7 +1,7 @@
 <template>
   <!-- Start Main Banner Area -->
   <div>
-    <div class="main-banner item-bg1" style="padding: 10px;">
+    <div class="main-banner item-bg1" style="padding: 10px; min-height: 100vh;">
       <div class="d-table">
         <div class="d-table-cell">
         </div>

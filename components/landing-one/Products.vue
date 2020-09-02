@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="min-height: 100vh;">
         <!-- Start All Products Area -->
         <section class="all-products-area pb-60">
             <div class="container">
