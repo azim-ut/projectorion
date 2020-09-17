@@ -2,20 +2,15 @@
   <!-- Start Main Banner Area -->
   <div>
 
-    <div class="main-banner item-bg1" style="padding: 10px; min-height: 100vh;">
-      <div id="particles-js"></div>
-      <div class="d-table">
-        <div class="d-table-cell">
-        </div>
-      </div>
+    <div class="main-banner item-bg1" style="padding: 0; min-height: 100vh;">
+      <video-bg :loop="false" :sources="['/assets/video/output_HD720.mp4']" img="~/assets/img/electricity-transmission-pylon-on-lake-6V2FKFF.jpg">
+
+      </video-bg>
     </div>
 
 
     <div class="main-banner item-about"
-         style="
-          background: rgb(35,141,199);
-          background: linear-gradient(180deg, rgba(35,141,199,1) 0%, rgba(42,171,228,1) 100%);
-          padding: 40px 10px 10px;">
+         style="padding: 40px 10px 10px;">
       <div class="overlay gradient-color"></div>
 
       <div class="timeline">
@@ -50,15 +45,18 @@
           </div>
         </div>
       </div>
-      <br/>
-      <br/>
+      <br />
+      <br />
     </div>
   </div>
   <!-- End Main Banner Area -->
 </template>
 
 <script>
+import VideoBg from 'vue-videobg'
+
 export default {
+  components: { VideoBg },
   data() {
     return {}
   },
@@ -71,6 +69,14 @@ export default {
 }
 </script>
 <style>
+.main-banner.item-about{
+/*linear-gradient(180deg, rgba(35,141,199,1) 0%, rgba(42,171,228,1) 100%)*/
+  background-image: url("~@/assets/img/cloud-industry-showcase-3-motion-graphic.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+
 /* The actual timeline (the vertical ruler) */
 .main-banner .timeline {
   position: relative;
@@ -171,6 +177,7 @@ export default {
 
 /* Make sure that all arrows are pointing leftwards */
 .main-banner .container::before {
+  display: none;
   left: 60px;
   border: medium solid #238DC7;
   border-width: 10px 10px 10px 0;
