@@ -1971,7 +1971,6 @@ Modal CSS
 Main Banner Area CSS
 =================================================*/
 .main-banner {
-  height: 600px;
   position: relative;
   z-index: 1;
   background: {
@@ -1991,7 +1990,7 @@ Main Banner Area CSS
 
   &.item-about {
     background-size: cover;
-    background-image: url(../../img/about.jpg);
+    background: #30363A;
   }
 
   &.item-bg3 {

@@ -1,7 +1,7 @@
 <template>
   <!-- Start Category Products Area -->
   <section class="category-products-area pb-60">
-    <div class="container" style="min-height: 100vh;">
+    <div class="container" style="min-height: 50vh;">
       <div class="row">
 
         <div class="col-6">

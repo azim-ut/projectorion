@@ -82,7 +82,10 @@ export default {
   ],
   proxy: {
     "/web": {
-      target: "http://itp/"
+      target: "http://projectorion/"
+    },
+    "/assets": {
+      target: "http://projectorion/"
     }
   },
   /*

@@ -2,7 +2,7 @@
   <!-- Start Facility Area -->
   <section class="all-products-area pb-60">
     <div class="container">
-      <h2 class="text-center">Услуги</h2>
+      <h2 class="text-center">Сферы услуг</h2>
       <br/>
       <b-card no-body class="overflow-hidden">
         <b-row no-gutters>
