@@ -6,7 +6,7 @@
         <h2 align="center" style="padding-bottom: 20px; border-bottom: #cbcfd6 1px solid;">Услуги</h2>
         <div>
           <b-card
-            img-src="/assets/img/new2-15.png"
+            img-src="~/assets/img/new2-15.png"
           >
             <b-card-text>
               <b-row>
@@ -94,15 +94,15 @@ export default {
 }
 
 .bgBlock0 {
-  background-image: url('/assets/img/new2-15.png');
+  background-image: url('~@/assets/img/new2-15.png');
 }
 
 .bgBlock1 {
-  background-image: url('/assets/img/new2-15.png');
+  background-image: url('~@/assets/img/new2-15.png');
 }
 
 .bgBlock2 {
-  background-image: url('/assets/img/new2-15.png');
+  background-image: url('~@/assets/img/new2-15.png');
 }
 
 .bgBlock3 {

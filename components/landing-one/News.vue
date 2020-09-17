@@ -103,18 +103,18 @@ export default {
 }
 
 .bgBlock0 {
-  background-image: url('/assets/img/new2-15.png');
+  background-image: url('~@/assets/img/new2-15.png');
 }
 
 .bgBlock1 {
-  background-image: url('/assets/img/new2-15.png');
+  background-image: url('~@/assets/img/new2-15.png');
 }
 
 .bgBlock2 {
-  background-image: url('/assets/img/new2-15.png');
+  background-image: url('~@/assets/img/new2-15.png');
 }
 
 .bgBlock3 {
-  background-image: url('/assets/img/new2-15.png');
+  background-image: url('~@/assets/img/new2-15.png');
 }
 </style>
