@@ -11,7 +11,6 @@
     <div style="background: #373737;">
       <Gallery></Gallery>
     </div>
-
     <br />
     <hr />
     <Subscribe></Subscribe>

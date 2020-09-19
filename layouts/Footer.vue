@@ -16,10 +16,9 @@
         <h3>Контакты</h3>
 
         <ul class="footer-contact-info">
-          <li><i class="fas fa-map-marker-alt"></i> 196191, Санкт-Петербург, пл. Конституции, д.7, лит. А</li>
+          <li><i class="fas fa-map-marker-alt"></i>196191, Санкт-Петербург, пл. Конституции, д.7, лит. А</li>
           <li><i class="fas fa-phone"></i>
-            <a href="#">+7-921-943-91-71</a>,
-            <a href="#">+7-921-638-12-72</a></li>
+            <a href="tel:8 (800) 550-31-93">8 (800) 550-31-93</a></li>
           <li><i class="far fa-envelope"></i> <a href="mailto:info.p.orion@gmail.com">info.p.orion@gmail.com</a></li>
         </ul>
       </div>
