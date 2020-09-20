@@ -3,7 +3,7 @@
   <div>
 
     <div class="main-banner item-bg1" style="padding: 0; min-height: 100vh;">
-      <video-bg :loop="false" :sources="['../../assets/video/output_HD720.mp4']" img="~/assets/img/electricity-transmission-pylon-on-lake-6V2FKFF.jpg">
+      <video-bg :loop="false" :sources="['~/assets/video/output_HD720.mp4']" img="~/assets/img/electricity-transmission-pylon-on-lake-6V2FKFF.jpg">
 
       </video-bg>
     </div>
