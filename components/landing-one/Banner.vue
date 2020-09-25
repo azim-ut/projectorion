@@ -3,9 +3,59 @@
   <div>
 
     <div class="main-banner item-bg1" style="padding: 0; min-height: 100vh;">
-      <video-bg :loop="false" :sources="[logoVideo]" img="~/assets/img/electricity-transmission-pylon-on-lake-6V2FKFF.jpg">
+      <video-bg :loop="false" :sources="[logoVideo]"
+                img="~/assets/img/electricity-transmission-pylon-on-lake-6V2FKFF.jpg">
 
       </video-bg>
+    </div>
+
+    <div class="aboutAreaRow">
+      <b-row>
+        <b-col cols="2"></b-col>
+        <b-col>
+          <b-row class="aboutArea">
+            <b-col xs="12" cols="6" class="dark" data-content="О компании">
+              <p>
+                Динамично развивающаяся компания «ПРОЕКТ ОРИОН» специализируется на комплексном
+                инжиниринге промышленных, гражданских объектов и объектов специального назначения МО РФ по
+                направлениям энергетики, автоматизации процессов, слаботочным системам, системам вентиляции и
+                кондиционирования
+              </p>
+            </b-col>
+            <b-col xs="12" cols="6" class="light" data-content="2">
+              <p>
+                Мы осуществляем все работы «под ключ», что позволяет каждому заказчику получить профессиональное
+                обслуживание
+                и
+                высокое качество предоставляемых услуг. Благодаря уникальным предложениям и принципиальному
+                использованию
+                проверенных технологий, наша команда выполняет даже самые неординарные и трудоемкие задачи, проявляя
+                индивидуальный подход к каждому проекту. В своей работе мы применяем высокоточные приборы и современные
+                технологичные решения, позволяющие добиться лучших результатов!
+              </p>
+            </b-col>
+            <b-col xs="12" cols="6" class="light" data-content="3">
+              <p>
+                Предприятие «Проект Орион» использует полный цикл предоставления инжинирингового обслуживания,
+                включающий:
+                планирование места под строительство или размещение объектов; решение юридических аспектов; инженерные
+                изыскания; проектирование; строительство; предоставление и техобслуживание оборудования; сдача в
+                эксплуатацию.
+              </p>
+            </b-col>
+            <b-col xs="12" cols="6" class="dark" data-content="4">
+              <p>
+                Нашим главным принципом работы является строгое соблюдение установленных
+                регламентов.
+                Высококвалифицированные специалисты ИТР, руководящий орган и исполнители способствуют обеспечению
+                профессиональной помощи, благодаря которой осуществление услуг проходит в обговоренные сроки, согласно
+                прайс-листу.
+              </p>
+            </b-col>
+          </b-row>
+        </b-col>
+        <b-col cols="2"></b-col>
+      </b-row>
     </div>
 
 
@@ -16,13 +66,7 @@
       <div class="timeline">
         <div class="container left">
           <div class="content">
-            <h2>О компании</h2>
-            <p>
-              Динамично развивающаяся компания «ПРОЕКТ ОРИОН» специализируется на комплексном
-              инжиниринге промышленных, гражданских объектов и объектов специального назначения МО РФ по
-              направлениям энергетики, автоматизации процессов, слаботочным системам, системам вентиляции и
-              кондиционирования
-            </p>
+
           </div>
         </div>
 
@@ -71,8 +115,54 @@ export default {
 }
 </script>
 <style>
-.main-banner.item-about{
-/*linear-gradient(180deg, rgba(35,141,199,1) 0%, rgba(42,171,228,1) 100%)*/
+.aboutAreaRow{
+  background: #FD5969;
+}
+.aboutArea:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #f2b01e;
+  transform: skewY(345deg);
+}
+.aboutArea .dark,
+.aboutArea .light {
+  padding: 10px;
+  margin: 0;
+  height: 350px;
+}
+.aboutArea .dark p,
+.aboutArea .light p {
+  position: relative;
+  z-index: 10;
+}
+.aboutArea .light{
+  background: #1ef2a8;
+}
+.aboutArea .dark{
+  color: #69501A;
+  background: #69501a;
+}
+.aboutArea .light:after,
+.aboutArea .dark:after{
+  content: attr(data-content);
+  font-size: 200%;
+  position: absolute; bottom: 10px;
+  color: #927153;
+  z-index: 1;
+
+}
+.aboutArea .light:after{
+  color: #fff;
+}
+.aboutArea .dark p{
+  color: #FEC7CD;
+}
+
+.main-banner.item-about {
+  /*linear-gradient(180deg, rgba(35,141,199,1) 0%, rgba(42,171,228,1) 100%)*/
   background-image: url("~@/assets/img/cloud-industry-showcase-3-motion-graphic.jpg");
   background-position: center center;
   background-size: cover;

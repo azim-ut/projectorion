@@ -80,3 +80,25 @@ export default {
     }
 }
 </script>
+<style>
+.navbar-area .comero-nav{
+  position: fixed;
+  background: transparent;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  z-index: 100;
+  right: 0;
+  color: #fff;
+}
+.navbar-area.is-sticky .comero-nav{
+  position: relative;
+  color: #fff;
+  font-weight: normal;
+}
+.navbar-area .comero-nav a{
+  color: #fff;
+}
+.navbar-area.is-sticky .comero-nav a {
+  color: #333;
+}
+</style>
