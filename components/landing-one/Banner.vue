@@ -11,7 +11,7 @@
     <div class="aboutAreaRow">
       <b-row>
         <b-col md="2" cols="12"></b-col>
-        <b-col cols="*">
+        <b-col>
           <b-row class="aboutArea">
             <b-col md="6" cols="12" class="one subAbout" data-content="О компании">
               <div class="iconRow">
@@ -137,6 +137,7 @@ export default {
   overflow: hidden;
   width: 100%;
   background: #ffffff;
+  margin: 30px;
 }
 
 .aboutArea .dark,
