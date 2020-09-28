@@ -137,7 +137,7 @@ export default {
   overflow: hidden;
   width: 100%;
   background: #ffffff;
-  margin: 30px;
+  margin: 30px 0;
 }
 
 .aboutArea .dark,
