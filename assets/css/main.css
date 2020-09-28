@@ -44,6 +44,10 @@
   white-space: nowrap !important;
 }
 
+.comero-nav .navbar .navbar-nav{
+  background: #fff;
+}
+
 .navbar-area #MenuBarLogo {
   display: none;
 }

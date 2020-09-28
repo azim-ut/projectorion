@@ -2,19 +2,23 @@
   <!-- Start Main Banner Area -->
   <div>
 
-    <div class="main-banner item-bg1" style="padding: 0; min-height: 100vh;">
-      <video-bg :loop="false" :sources="[logoVideo]"
-                img="~/assets/img/electricity-transmission-pylon-on-lake-6V2FKFF.jpg">
-
-      </video-bg>
+    <div class="main-banner item-bg1" style="padding: 0; width: 100%; overflow: hidden; background-color: #fff;">
+      <video id="videoBG" poster="~/assets/img/electricity-transmission-pylon-on-lake-6V2FKFF.jpg" autoplay muted loop>
+        <source :src="logoVideo" type="video/mp4">
+      </video>
     </div>
 
     <div class="aboutAreaRow">
       <b-row>
-        <b-col cols="2"></b-col>
-        <b-col>
+        <b-col md="2" cols="12"></b-col>
+        <b-col cols="*">
           <b-row class="aboutArea">
-            <b-col xs="12" cols="6" class="dark" data-content="О компании">
+            <b-col md="6" cols="12" class="one subAbout" data-content="О компании">
+              <div class="iconRow">
+                <div class="wrapper">
+                  <div class="icon"></div>
+                </div>
+              </div>
               <p>
                 Динамично развивающаяся компания «ПРОЕКТ ОРИОН» специализируется на комплексном
                 инжиниринге промышленных, гражданских объектов и объектов специального назначения МО РФ по
@@ -22,7 +26,12 @@
                 кондиционирования
               </p>
             </b-col>
-            <b-col xs="12" cols="6" class="light" data-content="2">
+            <b-col md="6" cols="12" class="two subAbout" data-content="2">
+              <div class="iconRow">
+                <div class="wrapper">
+                  <div class="icon"></div>
+                </div>
+              </div>
               <p>
                 Мы осуществляем все работы «под ключ», что позволяет каждому заказчику получить профессиональное
                 обслуживание
@@ -34,7 +43,12 @@
                 технологичные решения, позволяющие добиться лучших результатов!
               </p>
             </b-col>
-            <b-col xs="12" cols="6" class="light" data-content="3">
+            <b-col md="6" cols="12" class="three subAbout" data-content="3">
+              <div class="iconRow">
+                <div class="wrapper">
+                  <div class="icon"></div>
+                </div>
+              </div>
               <p>
                 Предприятие «Проект Орион» использует полный цикл предоставления инжинирингового обслуживания,
                 включающий:
@@ -43,7 +57,12 @@
                 эксплуатацию.
               </p>
             </b-col>
-            <b-col xs="12" cols="6" class="dark" data-content="4">
+            <b-col md="6" cols="12" class="four subAbout" data-content="4">
+              <div class="iconRow">
+                <div class="wrapper">
+                  <div class="icon"></div>
+                </div>
+              </div>
               <p>
                 Нашим главным принципом работы является строгое соблюдение установленных
                 регламентов.
@@ -54,7 +73,7 @@
             </b-col>
           </b-row>
         </b-col>
-        <b-col cols="2"></b-col>
+        <b-col md="2" cols="12"></b-col>
       </b-row>
     </div>
 
@@ -97,10 +116,9 @@
 </template>
 
 <script>
-import VideoBg from 'vue-videobg'
 
 export default {
-  components: { VideoBg },
+  components: {},
   data() {
     return {
       logoVideo: require('../../assets/video/output_HD720.mp4')
@@ -115,50 +133,105 @@ export default {
 }
 </script>
 <style>
-.aboutAreaRow{
-  background: #FD5969;
-}
-.aboutArea:before {
-  content: '';
-  position: absolute;
-  top: -50%;
+.aboutAreaRow {
+  overflow: hidden;
   width: 100%;
-  height: 100%;
-  background: #f2b01e;
-  transform: skewY(345deg);
+  background: #ffffff;
 }
+
 .aboutArea .dark,
 .aboutArea .light {
-  padding: 10px;
-  margin: 0;
-  height: 350px;
 }
+
 .aboutArea .dark p,
 .aboutArea .light p {
   position: relative;
   z-index: 10;
 }
-.aboutArea .light{
-  background: #1ef2a8;
-}
-.aboutArea .dark{
-  color: #69501A;
-  background: #69501a;
-}
-.aboutArea .light:after,
-.aboutArea .dark:after{
-  content: attr(data-content);
-  font-size: 200%;
-  position: absolute; bottom: 10px;
-  color: #927153;
-  z-index: 1;
 
+.aboutArea .subAbout {
+  padding: 50px;
 }
-.aboutArea .light:after{
+
+.aboutArea .one {
+  background: #19B2C0;
+}
+
+.aboutArea .two {
+  background: #D2EDFB;
+}
+
+.aboutArea .three {
+  background: #FA9C21;
+}
+
+.aboutArea .four {
+  background: #103340;
+}
+
+.aboutArea .one p,
+.aboutArea .three p,
+.aboutArea .four p {
   color: #fff;
 }
-.aboutArea .dark p{
-  color: #FEC7CD;
+
+.aboutArea .iconRow {
+  position: relative;
+  height: 100px;
+}
+
+.aboutArea .iconRow .wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.aboutArea .iconRow .wrapper .icon {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  background: transparent no-repeat center center/contain;
+}
+
+.aboutArea .three .iconRow .wrapper {
+  background-color: #FFC013;
+}
+
+.aboutArea .four .iconRow .wrapper {
+  background-color: #D0EEFD;
+}
+
+.aboutArea .two .iconRow .wrapper {
+  background-color: #2C5C73;
+}
+
+.aboutArea .one .iconRow .wrapper {
+  background-color: #2C5C73;
+}
+
+.aboutArea .one .iconRow .wrapper .icon {
+  background-image: url("~@/assets/img/icons/flash.svg");
+}
+
+.aboutArea .two .iconRow .wrapper .icon {
+  background-image: url("~@/assets/img/icons/plug.svg");
+}
+
+.aboutArea .three .iconRow .wrapper .icon {
+  background-image: url("~@/assets/img/icons/accumulator.svg");
+}
+
+.aboutArea .four .iconRow .wrapper .icon {
+  background-image: url("~@/assets/img/icons/buld.svg");
 }
 
 .main-banner.item-about {
@@ -176,18 +249,6 @@ export default {
   margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
-.main-banner .timeline::after {
-  content: '';
-  position: absolute;
-  width: 0px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 0%;
-  margin-left: -3px;
-}
-
 /* Container around content */
 .main-banner .container {
   padding: 10px 40px;
@@ -196,94 +257,9 @@ export default {
   width: 80%;
 }
 
-/* The circles on the timeline */
-.main-banner .container::after {
-  content: '';
-  position: absolute;
-}
 
-/* Place the container to the left */
-.main-banner .left {
-  left: 0;
-}
-
-/* Place the container to the right */
-.main-banner .right {
-  left: 50%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.main-banner .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-/* Add arrows to the right container (pointing left) */
-.main-banner .right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.main-banner .right::after {
-  left: -16px;
-}
-
-/* The actual content */
-.main-banner .content {
-  max-width: 50%;
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-/* Place the timelime to the left */
-.main-banner .timeline::after {
-  left: 31px;
-}
-
-/* Full-width containers */
-.main-banner .container {
+#videoBG{
   width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
-}
-
-/* Make sure that all arrows are pointing leftwards */
-.main-banner .container::before {
-  display: none;
-  left: 60px;
-  border: medium solid #238DC7;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent #238DC7 transparent transparent;
-}
-
-/* Make sure all circles are at the same spot */
-.main-banner .left::after, .main-banner .right::after {
-  left: 15px;
-}
-
-/* Make all right containers behave like the left ones */
-.main-banner .right {
-  left: 0%;
 }
 
 @media screen and (max-width: 800px) {

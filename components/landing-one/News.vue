@@ -22,18 +22,18 @@
             :key="index">
             <b-container class="bv-example-row">
               <b-row v-if="index%2 === 0">
-                <b-col :class="'bgBlock bgBlock'+index">&nbsp;</b-col>
-                <b-col class="productBlockTest">
+                <b-col :class="'bgBlock bgBlock'+index" cols="12" md="6">&nbsp;</b-col>
+                <b-col class="productBlockTest" cols="0" md="6">
                   <h2 style="font-weight: bold;">{{ row.title }} <b style="color: #F87E7E;">{{row.author}}</b></h2>
                   <p style="font-size: medium">{{ row.post }}</p>
                 </b-col>
               </b-row>
               <b-row v-if="index%2 === 1">
-                <b-col class="productBlockTest">
+                <b-col class="productBlockTest" cols="12" md="6">
                   <h2 style="font-weight: bold;">{{ row.title }} <b style="color: #F87E7E;">{{row.author}}</b></h2>
                   <p style="font-size: medium">{{ row.post }}</p>
                 </b-col>
-                <b-col :class="'bgBlock bgBlock'+index">&nbsp;</b-col>
+                <b-col :class="'bgBlock bgBlock'+index" cols="0" md="6">&nbsp;</b-col>
               </b-row>
             </b-container>
           </div>
@@ -116,5 +116,10 @@ export default {
 
 .bgBlock3 {
   background-image: url('~@/assets/img/new2-15.png');
+}
+@media screen and (max-width: 800px) {
+  .bgBlock{
+    display: none;
+  }
 }
 </style>
