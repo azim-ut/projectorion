@@ -3,7 +3,7 @@
     <Banner></Banner>
     <br />
     <br />
-    <Products></Products>
+    <Services></Services>
     <hr />
     <News></News>
     <br />
@@ -23,7 +23,7 @@
 
 <script>
 import Banner from '../components/landing-one/Banner'
-import Products from '../components/landing-one/Products'
+import Services from '../components/landing-one/Services'
 import Gallery from '../components/landing-one/Gallery'
 import News from '../components/landing-one/News'
 import Subscribe from '../components/common/Subscribe'
@@ -31,7 +31,7 @@ import Partners from '../components/landing-one/Partners'
 
 export default {
   components: {
-    Banner, Products, Gallery, News, Subscribe, Partners
+    Banner, Services, Gallery, News, Subscribe, Partners
   }
 }
 </script>

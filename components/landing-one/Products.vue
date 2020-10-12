@@ -2,31 +2,9 @@
   <div style="min-height: 100vh;">
     <!-- Start All Products Area -->
     <section class="all-products-area pb-60">
-      <b-container class="bv-example-row" style=" padding-bottom: 50px;">
-        <h2 align="center" style="padding-bottom: 20px; border-bottom: #cbcfd6 1px solid;">Услуги</h2>
-        <div>
-          <b-card
-            img-src="~/assets/img/new2-15.png"
-          >
-            <b-card-text>
-              <b-row>
-                <b-col
-                  class="jobsItem"
-                  cols="3" sm="6"
-                  v-for="(product, index) in products"
-                  :key="index"
-                  fluid="md">
-                  <b-row>
-                    <b-col cols="3" align="center">
-                      <i class="far fa-check-circle" style="color: #7e6a53; font-size: xx-large;"></i>
-                    </b-col>
-                    <b-col style="font-size: large;">{{ product.name }}</b-col>
-                  </b-row>
-                </b-col>
-              </b-row>
-            </b-card-text>
-          </b-card>
-        </div>
+
+      <b-container class="bv-example-row services" style=" padding-bottom: 50px;">
+        <h2 align="center" style="padding-bottom: 20px; ">Продукция</h2>
 
         <b-card-group deck>
 
@@ -88,9 +66,35 @@ export default {
   padding-top: 20px;
 }
 
-.bgBlock {
-  background: #FFDDB1 no-repeat center center/contain;
-  min-height: 200px;
+.services .bgBlock {
+  background: #FFDDB1 no-repeat center center/cover;
+  min-height: 300px;
+  border-radius: 20px;
+}
+
+.services .title {
+  font-size: 120%;
+  line-height: 20px;
+  border-left: #000 5px solid;
+  padding: 2px 0 2px 10px;
+  color: #000;
+  margin-bottom: 10px;
+  position: relative;
+  left: -20px;
+}
+
+.services .title.left {
+  border: none;
+  text-align: right;
+  padding: 2px 10px 2px 0px;
+  border-right: #000 5px solid;
+  position: relative;
+  left: 20px;
+  width: 100%;
+  z-index: 10;
+}
+.services .title.wt {
+  border-color: #fff;
 }
 
 .bgBlock0 {

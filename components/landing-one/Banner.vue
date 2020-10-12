@@ -10,8 +10,7 @@
 
     <div class="aboutAreaRow">
       <b-row>
-        <b-col md="2" cols="12"></b-col>
-        <b-col>
+        <b-col md="8" cols="12">
           <b-row class="aboutArea">
             <b-col md="6" cols="12" class="one subAbout" data-content="О компании">
               <div class="iconRow">
@@ -73,7 +72,9 @@
             </b-col>
           </b-row>
         </b-col>
-        <b-col md="2" cols="12"></b-col>
+        <b-col md="4" cols="12">
+          1111
+        </b-col>
       </b-row>
     </div>
 
@@ -137,7 +138,7 @@ export default {
   overflow: hidden;
   width: 100%;
   background: #ffffff;
-  margin: 30px 0;
+  margin: 0px 0;
 }
 
 .aboutArea .dark,
@@ -204,19 +205,19 @@ export default {
 }
 
 .aboutArea .three .iconRow .wrapper {
-  background-color: #FFC013;
+  background-color: #fff;
 }
 
 .aboutArea .four .iconRow .wrapper {
-  background-color: #D0EEFD;
+  background-color: #fff;
 }
 
 .aboutArea .two .iconRow .wrapper {
-  background-color: #2C5C73;
+  background-color: #fff;
 }
 
 .aboutArea .one .iconRow .wrapper {
-  background-color: #2C5C73;
+  background-color: #fff;
 }
 
 .aboutArea .one .iconRow .wrapper .icon {
@@ -258,6 +259,13 @@ export default {
   width: 80%;
 }
 
+.timeline{
+  color: #fff;
+}
+
+.timeline p{
+  color: #fff;
+}
 
 #videoBG{
   width: 100%;
