@@ -10,7 +10,10 @@
 
     <div class="aboutAreaRow">
       <b-row>
-        <b-col md="8" cols="12">
+        <b-col md="2" cols="12">
+
+        </b-col>
+        <b-col md="6" cols="12">
           <b-row class="aboutArea">
             <b-col md="6" cols="12" class="one subAbout" data-content="О компании">
               <div class="iconRow">
@@ -72,8 +75,8 @@
             </b-col>
           </b-row>
         </b-col>
-        <b-col md="4" cols="12">
-          1111
+        <b-col md="2" cols="12">
+
         </b-col>
       </b-row>
     </div>
