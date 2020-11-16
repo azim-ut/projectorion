@@ -1,11 +1,20 @@
 <template>
   <div>
     <TopPanel v-if="isShowing" @clicked="onTopPanelClose"></TopPanel>
-    <TopHeader v-if="isShowing"></TopHeader>
+    <TopHeader></TopHeader>
     <Menubar></Menubar>
-    <MobileMenubar style="position: fixed !important; bottom: 10px !important; left: 10px !important; z-index: 1000;"></MobileMenubar>
+    <MainBanner></MainBanner>
+    <AboutBlock></AboutBlock>
+    <AboutBlockWeDo></AboutBlockWeDo>
+    <ServicesTitleBlock></ServicesTitleBlock>
+    <ServicesDescription></ServicesDescription>
+    <ServicesFooter></ServicesFooter>
+    <ConsultForm></ConsultForm>
+    <Objects></Objects>
+    <Why></Why>
+    <Partners></Partners>
+    <Contacts></Contacts>
     <nuxt />
-    <hr/>
     <Footer></Footer>
     <SiteLoader  v-if="loading" />
     <BackToTop></BackToTop>
@@ -15,14 +24,26 @@
 <script>
 import TopPanel from './TopPanel';
 import TopHeader from './TopHeader';
+import AboutBlock from './AboutBlock';
+import AboutBlockWeDo from './AboutBlockWeDo';
+import ServicesTitleBlock from './ServicesTitleBlock';
+import ServicesDescription from './ServicesDescription';
+import ServicesFooter from './ServicesFooter';
+import ConsultForm from './ConsultForm';
+import Objects from './Objects';
+import Partners from './Partners';
+import Why from './Why';
+import Contacts from './Contacts';
 import Menubar from './Menubar';
-import MobileMenubar from './MobileMenubar';
+import MainBanner from './MainBanner';
 import Footer from './Footer';
 import BackToTop from './BackToTop';
 import SiteLoader from './SiteLoder';
 export default {
   components: {
-    TopPanel, TopHeader, Menubar, Footer, BackToTop, SiteLoader, MobileMenubar
+    Partners,
+    Contacts,
+    TopPanel, TopHeader, Menubar, AboutBlock, AboutBlockWeDo, ServicesTitleBlock, ServicesFooter, ConsultForm, Objects, Why, ServicesDescription, MainBanner, Footer, BackToTop, SiteLoader
   },
   data() {
     return {

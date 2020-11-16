@@ -23,7 +23,18 @@ export default {
       }
     ],
     script: [
-      { src: "/assets/js/materialize.min.js" }
+      { src: "/assets/js/materialize.min.js" },
+      { src: "/assets/js/hammer.min.js" },
+      { src: "/assets/js/jquery-1.10.2.min.js" },
+      { src: "/assets/js/lazyload-1.3.min.js" },
+      { src: "/assets/js/tilda-animation-1.0.min.js" },
+      { src: "/assets/js/tilda-blocks-2.7.js" },
+      { src: "/assets/js/tilda-forms-1.0.min.js" },
+      { src: "/assets/js/tilda-menusub-1.0.min.js" },
+      { src: "/assets/js/tilda-scripts-2.8.min.js" },
+      { src: "/assets/js/tilda-slds-1.4.min.js" },
+      { src: "/assets/js/tilda-zero-forms-1.0.min.js" },
+      { src: "/assets/js/tilda-zoom-2.0.min.js" }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
@@ -61,11 +72,17 @@ export default {
    */
   css: [
     "@/assets/css/main.css",
+    "@/assets/css/tilda-animation-1.0.min.css",
+    "@/assets/css/tilda-blocks-2.12.css",
+    "@/assets/css/tilda-grid-3.0.min.css",
+    "@/assets/css/tilda-menusub-1.0.min.css",
+    "@/assets/css/tilda-slds-1.4.min.css",
+    "@/assets/css/tilda-zoom-2.0.min.css",
     "@/assets/scss/styles/animate.min.css",
     "@/assets/scss/styles/fontawesome.min.css",
     "@/assets/scss/styles/style.scss",
     "@/assets/scss/styles/admin.scss",
-    "@/assets/scss/styles/responsive.scss"
+    "@/assets/scss/styles/responsive.scss",
   ],
   /*
    ** Auto import components
