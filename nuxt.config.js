@@ -1,123 +1,59 @@
 export default {
-  mode: 'spa',
+  // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
+  ssr: false,
   generate: {
     dir: 'www'
   },
-  /*
-   ** Nuxt target
-   ** See https://nuxtjs.org/api/configuration-target
-   */
-  /*
-   ** Headers of the page
-   ** See https://nuxtjs.org/api/configuration-head
-   */
+
+  // Target (https://go.nuxtjs.dev/config-target)
+  target: 'static',
+
+  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Project Orion',
+    title: 'orion',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Проект Орион'
-      }
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
     ],
-    script: [
-      { src: "/assets/js/materialize.min.js" },
-      { src: "/assets/js/hammer.min.js" },
-      { src: "/assets/js/jquery-1.10.2.min.js" },
-      { src: "/assets/js/lazyload-1.3.min.js" },
-      { src: "/assets/js/tilda-animation-1.0.min.js" },
-      { src: "/assets/js/tilda-blocks-2.7.js" },
-      { src: "/assets/js/tilda-forms-1.0.min.js" },
-      { src: "/assets/js/tilda-menusub-1.0.min.js" },
-      { src: "/assets/js/tilda-scripts-2.8.min.js" },
-      { src: "/assets/js/tilda-slds-1.4.min.js" },
-      { src: "/assets/js/tilda-zero-forms-1.0.min.js" },
-      { src: "/assets/js/tilda-zoom-2.0.min.js" }
-    ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-  modules: [
-    // Doc: https://bootstrap-vue.js.org
-    "bootstrap-vue/nuxt",
-    "@nuxtjs/axios",
-    "@nuxtjs/proxy",
-    "@nuxtjs/redirect-module"
-  ],
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: [
-    { src: "~/plugins/fontawesome.js", ssr: false },
-    { src: "~/plugins/vue-carousel", ssr: false },
-    { src: "~/plugins/vue-backtotop", ssr: false },
-    { src: "~/plugins/vue-toastification", ssr: false },
-    { src: "~/plugins/vueperslides", ssr: false }
-  ],
-  loading: { color: "#fff" },
-  axios: {
-    baseURL: process.env.BASE_URL || "http://localhost:3000",
-    debug: true,
-    proxy: true
-  },
-  router: {
-    linkActiveClass: "active"
-  },
-  fontawesome: {
-    icons: [{ solid: ["faCog", "faHome"] }, { brands: ["faFacebook"] }]
-  },
-  /*
-   ** Global CSS
-   */
-  css: [
-    "@/assets/css/main.css",
-    "@/assets/css/tilda-animation-1.0.min.css",
-    "@/assets/css/tilda-blocks-2.12.css",
-    "@/assets/css/tilda-grid-3.0.min.css",
-    "@/assets/css/tilda-menusub-1.0.min.css",
-    "@/assets/css/tilda-slds-1.4.min.css",
-    "@/assets/css/tilda-zoom-2.0.min.css",
-    "@/assets/scss/styles/animate.min.css",
-    "@/assets/scss/styles/fontawesome.min.css",
-    "@/assets/scss/styles/style.scss",
-    "@/assets/scss/styles/admin.scss",
-    "@/assets/scss/styles/responsive.scss",
-  ],
-  /*
-   ** Auto import components
-   ** See https://nuxtjs.org/api/configuration-components
-   */
+
+  // Global CSS (https://go.nuxtjs.dev/config-css)
+  css: [],
+
+  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
+  plugins: [],
+
+  // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
-  /*
-   ** Nuxt.js dev-modules
-   */
+
+  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    "@nuxtjs/eslint-module",
-    "@nuxtjs/fontawesome"
+    // https://go.nuxtjs.dev/eslint
+    //'@nuxtjs/eslint-module',
+    // https://go.nuxtjs.dev/stylelint
+    //'@nuxtjs/stylelint-module',
   ],
-  proxy: {
-    "/web": {
-      target: "http://projectorion/"
-    },
-    "/assets": {
-      target: "http://projectorion/"
-    }
-  },
-  /*
-   ** Content module configuration
-   ** See https://content.nuxtjs.org/configuration
-   */
+
+  // Modules (https://go.nuxtjs.dev/config-modules)
+  modules: [
+    // https://go.nuxtjs.dev/bootstrap
+    'bootstrap-vue/nuxt'
+    // https://go.nuxtjs.dev/axios
+    //'@nuxtjs/axios',
+    // https://go.nuxtjs.dev/pwa
+    //'@nuxtjs/pwa',
+    // https://go.nuxtjs.dev/content
+    //'@nuxt/content',
+  ],
+
+  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
+  axios: {},
+
+  // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
-  /*
-   ** Build configuration
-   ** See https://nuxtjs.org/api/configuration-build/
-   */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
-  }
-};
+
+  // Build Configuration (https://go.nuxtjs.dev/config-build)
+  build: {},
+}
