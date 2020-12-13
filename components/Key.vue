@@ -86,9 +86,12 @@ export default {
   .keyBlock .verticalCenter,
   .keyBlock .content .head,
   .keyBlock .content {
-    width: 100%;
-    padding: 2%;
+    width: auto;
     margin-left: auto;
+  }
+
+  .keyBlock .content {
+    padding: 8%;
   }
 
   .keyBlock .content .redButton {

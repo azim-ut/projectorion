@@ -73,7 +73,7 @@ export default {
 @media only screen and (max-width: 440px) {
   .ServiceBeginBlock .content{
     width: 90%;
-    margin: 5%;
+    margin: 8%;
   }
   .ServiceBeginBlock .img{
     top: 0%;

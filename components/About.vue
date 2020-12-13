@@ -64,7 +64,7 @@ export default {
     margin: 0;
   }
   .About .content {
-    width: 100%;
+    width: auto;
     padding: 8%;
   }
 }

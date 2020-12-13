@@ -95,16 +95,17 @@ export default {
 .why_we {
   width: 100%;
   margin-top: 50px;
+  padding-top: 50px;
   background-color: #fff;
   height: auto;
   overflow: hidden;
 }
 
 .why_we .whyRow {
-  width: 50%;
+  width: 45%;
   float: left;
   background: #fff;
-  padding: 5%;
+  padding: 2%;
   height: 250px;
   display: flex;
   position: relative;
@@ -133,12 +134,25 @@ export default {
 
 @media (max-width: 768px) {
   .why_we {
-    width: 94%;
+    width: auto;
+    margin: 20px;
   }
 
   .why_we .whyRow {
-    width: 100%;
+    width: auto;
+    display: block;
     height: auto;
+    text-align: center;
+  }
+
+  .why_we .whyRow img {
+    position: relative;
+  }
+  .why_we .whyRow img,
+  .why_we .whyRow .text{
+    width: auto;
+    height: auto;
+    margin: 0%;
   }
 }
 

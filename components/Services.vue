@@ -188,6 +188,9 @@ export default {}
 
   .ServiceBlock .content .box.wild{
     height: auto;
+    width: 95%;
+    display: block;
+    padding: 5%;
   }
 }
 </style>

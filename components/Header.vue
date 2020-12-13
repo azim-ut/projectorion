@@ -69,7 +69,7 @@ export default {
 }
 
 #HeadMenu nav ul{
-  float: right; padding: 0; margin: 0 0 0 auto;
+  float: right; padding: 0; margin: 0 auto;
   transition: .5s;
 }
 
@@ -117,12 +117,17 @@ export default {
 }
 
 @media (max-width: 768px) {
+  #HeadMenu nav{
+    padding: 0;
+  }
+
   #HeadMenu nav .logo {
     display: none;
   }
 
   #HeadMenu .toggle{
     display: block;
+    background: #fff url("~assets/img/logo_only.jpeg") no-repeat center center/contain;
   }
 
   #HeadMenu nav ul{

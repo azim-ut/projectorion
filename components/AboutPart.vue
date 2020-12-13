@@ -1,15 +1,17 @@
 <template>
   <div class="AboutPartBlock">
     <div class="verticalLeft"></div>
-    <div class="content">
-      <p class="head">
-        Предприятие «Проект Орион» предоставляет полный цикл инжиниринговых
-        услуг
-      </p>
-      <p>
-        Высококвалифицированные специалисты ИТР осуществляют профессиональную деятельность, благодаря которой
-        компания
-        производит работы в установленные сроки и бюджет.</p>
+    <div class="verticalCenter">
+      <div class="content">
+        <p class="head">
+          Предприятие «Проект Орион» предоставляет полный цикл инжиниринговых
+          услуг
+        </p>
+        <p>
+          Высококвалифицированные специалисты ИТР осуществляют профессиональную деятельность, благодаря которой
+          компания
+          производит работы в установленные сроки и бюджет.</p>
+      </div>
     </div>
     <div class="img"></div>
   </div>
@@ -66,9 +68,12 @@ export default {
   .AboutPartBlock .verticalCenter,
   .AboutPartBlock .content .head,
   .AboutPartBlock .content {
-    width: 100%;
-    padding: 2%;
+    width: auto;
     margin-left: auto;
+  }
+
+  .AboutPartBlock .content {
+    padding: 8%;
   }
 
   .AboutPartBlock .content .redButton {

@@ -190,7 +190,8 @@ export default {
 @media (max-width: 768px) {
 
   .projectBlock {
-    padding: 5%;
+    padding: 8%;
+    width: auto;
   }
 
   .projectBlock .content {

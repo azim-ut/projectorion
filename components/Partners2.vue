@@ -20,7 +20,8 @@
         <div>
           <p>Вы можете связаться с нами по
             <a href="#cons" style="color: red !important;">электронной почте</a> или телефону:</p>
-            <a class="d-sm-inline-block" href="tel:88005503193" style="color: red !important; font-size: 2.2em;">8 (800) 550-31-93</a>
+          <a class="d-sm-inline-block" href="tel:88005503193" style="color: red !important; font-size: 2.2em;">8 (800)
+            550-31-93</a>
         </div>
       </div>
     </div>
@@ -37,7 +38,8 @@ export default {}
 <style>
 .Partners2Block {
   background: #fafafa;
-  display: flex; width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .Partners2 {
@@ -80,7 +82,11 @@ export default {}
 
 
 @media (max-width: 768px) {
-  .Partners2 p{
+  .Partners2 {
+    height: auto;
+  }
+
+  .Partners2 p {
     margin: 10px 0;
   }
 }

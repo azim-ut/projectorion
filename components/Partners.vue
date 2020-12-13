@@ -1,6 +1,6 @@
 <template>
   <div id="partner" class="PartnerBlock">
-    <div class="verticalRight">&nbsp;</div>
+    <div class="verticalLeft">&nbsp;</div>
     <div class="verticalCenter">
       <div class="content">
         <h1 align="center">Наши партнеры:</h1>
@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <div class="verticalLeft">&nbsp;</div>
+    <div class="verticalRight">&nbsp;</div>
   </div>
 </template>
 
@@ -71,10 +71,10 @@ export default {
 }
 
 .PartnerBlock .content .row {
-  width: 45%;
+  width: 41%;
   margin: 0 2.5% 2.5%;
   float: left;
-  height: 130px;
+  height: 60px;
   background: #fff;
   padding: 2%;
   text-align: center;
@@ -85,7 +85,7 @@ export default {
 }
 
 .PartnerBlock .content .row.long {
-  width: 95%;
+  width: auto;
   display: flex;
   height: auto;
 }
@@ -102,10 +102,14 @@ export default {
 
 @media (max-width: 768px) {
   .PartnerBlock .content .row.long {
-    width: 100%;
+    width: auto;
     display: block;
     height: auto;
   }
+  .PartnerBlock .content .row{
+    width: auto; height: auto;
+  }
+
   .PartnerBlock .content .row p{
     margin: 5% 0;
   }

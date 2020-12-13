@@ -61,7 +61,7 @@ export default {}
 
 
 <style>
-.ContactsBlock{
+.ContactsBlock {
   width: 100%;
   background: #f9f9f9;
 }
@@ -75,17 +75,17 @@ export default {}
   width: 25%;
 }
 
-.Contacts .content .col p{
+.Contacts .content .col p {
   line-height: 40px;
 }
 
-.Contacts .content .col ul{
+.Contacts .content .col ul {
   font-size: .8em;
   line-height: 30px;
   list-style: none;
 }
 
-.Contacts .content .col ul{
+.Contacts .content .col ul {
 }
 
 
@@ -110,37 +110,23 @@ export default {}
 }
 
 .table_cont_sub {
-  background: url("~assets/img/sent.png") no-repeat rgb(229, 39, 41);
+  background: url("~assets/img/sent.png") no-repeat rgb(229, 39, 41) center center;
   width: 50px;
   height: 40px;
   background-size: 50%;
-  background-position: center;
   border: 0px;
 }
 
-@media only screen and (max-width: 440px) {
-  .Contacts {
-    width: 90%;
-    margin-left: 00%;
+@media (max-width: 768px) {
+
+  .Contacts .content {
+    display: block;
+    padding: 5% 0;
   }
 
-  .table_cont {
+  .Contacts .content .col {
     width: 100%;
+    margin-bottom: 5%;
   }
-
-  .table_cont_small {
-    width: 100%;
-  }
-
-  .table_cont_inp {
-    width: 100%;
-  }
-
-  .table_cont_sub {
-    width: 100%;
-    background-size: 10%;
-    background-position: 5%;
-  }
-
 }
 </style>
