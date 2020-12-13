@@ -123,6 +123,7 @@ export default {
 .why_we .whyRow img {
   padding-right: 20px;
   width: 20%;
+  max-width: 60px;
   position: absolute;
 }
 

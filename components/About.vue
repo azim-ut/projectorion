@@ -40,8 +40,8 @@ export default {
 
 .About .content {
   background: #fafafa;
-  width: 70%;
-  padding: 8% 10% 8% 0;
+  max-width: 500px;
+  padding: 4% 10% 4% 0;
 }
 
 .About .content p{
