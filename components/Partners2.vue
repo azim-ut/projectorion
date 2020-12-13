@@ -6,7 +6,7 @@
     <div class="verticalCenter Partners2">
       <div class="content">
         <h2 class="semibold">ИНЖИНИРИНГОВАЯ КОМПАНИЯ</h2>
-        <h1 class="semibold" style="color: red;">PROJECT ORION</h1>
+        <h1 class="semibold redText">PROJECT ORION</h1>
         <p>
           Осуществляет инжиниринг: проектирование,
           строительство, монтаж и ряд других регламентированных услуг, характерных для предприятия полного цикла. В
