@@ -125,7 +125,7 @@ export default {
 
 .ConsultationBlock .content {
   background: url("~assets/img/1001480308_1.jpg") no-repeat fixed;
-  padding: 10%;
+  padding: 5%;
 }
 
 .cons_pre_link a {

@@ -7,7 +7,8 @@
       <div class="content">
         <p class="h3">Инжиниринговая компания</p>
         <p class="h1 redText semibold">PROJECT ORION</p>
-        <p class="h3 bold">Качество имеет значение!</p>
+        <p class="h3 semibold">Качество имеет значение!</p>
+        <br />
         <p class="h4">Реализуем инжиниринговые проекты любой
           сложности и объемов
           - от планирования места под размещение объектов до проектирования и сдачи в эксплуатацию.
@@ -63,7 +64,7 @@ export default {
 }
 
 .mainBannerContent .h1 {
-  font-size: 3.5em;
+  font-size: 3em;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -92,13 +93,26 @@ export default {
     display: none;
   }
 
+  .mainBannerContent {
+    background: url("~assets/img/background.jpg") no-repeat center center;
+    min-height: auto;
+  }
+
   .mainBannerContent .content {
     margin: 50px 20px;
   }
 
   .mainBannerContent p {
-    width: 80%;
+    width: auto;
     margin: auto;
+  }
+
+  .mainBannerContent .h1 {
+    font-size: 2.5em;
+  }
+
+  .mainBannerContent .h3 {
+    font-size: 1.2em;
   }
 }
 </style>

@@ -143,6 +143,8 @@ export default {
     display: block;
     height: auto;
     text-align: center;
+    margin-bottom: 50px;
+
   }
 
   .why_we .whyRow img {

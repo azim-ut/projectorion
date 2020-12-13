@@ -3,14 +3,12 @@
     "name": "fun",
     "path": "/fun",
     "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\pages\\\\fun.vue",
-    "chunkName": "pages/fun",
-    "_name": "_4479801e"
+    "chunkName": "pages/fun"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_a71ee978"
+    "chunkName": "pages/index"
   }
 ]

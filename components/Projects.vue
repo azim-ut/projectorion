@@ -76,22 +76,22 @@ export default {
         {
           title: 'ООО «Армада»',
           content: 'Работы по монтажу и пуско-наладке систем внешнего энергоснабжения 10/0,4 кВ (г.Каспийск).',
-          image: 'https://drive.google.com/thumbnail?id=18Ts_SRAkTIlhpqbMnC4X0TfWvlOt97Fy'
+          image: require('~/assets/img/monopoly_sm.jpg')
         },
         {
           title: 'ООО «Титан Полимер»',
           content: 'Работы по монтажу систем 10/0,4 кВ, монтаж кабельных систем и лоточных трасс, монтаж освещения, монтаж слаботочных систем (г.Псков).',
-          image: 'https://drive.google.com/thumbnail?id=18Ts_SRAkTIlhpqbMnC4X0TfWvlOt97Fy'
+          image: require('~/assets/img/monopoly_sm.jpg')
         },
         {
           title: 'ГК Росстройинвест (РСТИ)',
           content: 'Монтаж систем внутреннего электроснабжения.',
-          image: 'https://drive.google.com/thumbnail?id=18Ts_SRAkTIlhpqbMnC4X0TfWvlOt97Fy'
+          image: require('~/assets/img/monopoly_sm.jpg')
         },
         {
           title: 'Министерство Обороны РФ',
           content: 'Монтаж систем внешнего энергоснабжения 10/0,4 кВ.',
-          image: 'https://drive.google.com/thumbnail?id=18Ts_SRAkTIlhpqbMnC4X0TfWvlOt97Fy'
+          image: require('~/assets/img/monopoly_sm.jpg')
         }
       ],
       options: {
@@ -114,7 +114,6 @@ export default {
   display: flex;
   width: 100%;
   background: #fafafa;
-  padding: 5% 0 0;
 }
 
 .Project {

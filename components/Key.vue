@@ -20,10 +20,9 @@
           проверенных технологий, наша команда выполняет даже самые неординарные и трудоемкие задачи, проявляя
           индивидуальный подход к каждому проекту.
         </p>
-        <p>
-          <br />
+        <div class="buttonFrame">
           <b-button squared class="redButton">Получить консультацию</b-button>
-        </p>
+        </div>
       </div>
     </div>
     <div class="verticalRight">&nbsp;</div>
@@ -47,7 +46,7 @@ export default {
 
 .keyBlock .img {
   width: 40%;
-  min-height: 150px;
+  min-height: 300px;
   background: transparent url("~assets/img/worker.jpg") no-repeat center center/cover;
   margin-left: 10px;
 }
@@ -76,6 +75,10 @@ export default {
   font-weight: 600;
   line-height: 1.3;
 }
+.keyBlock .content .buttonFrame{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 @media (max-width: 768px) {
   .keyBlock {
@@ -96,6 +99,10 @@ export default {
 
   .keyBlock .content .redButton {
     width: 100%;
+  }
+
+  .keyBlock .content .buttonFrame{
+    text-align: center;
   }
 
 }

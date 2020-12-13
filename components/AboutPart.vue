@@ -4,13 +4,10 @@
     <div class="verticalCenter">
       <div class="content">
         <p class="head">
-          Предприятие «Проект Орион» предоставляет полный цикл инжиниринговых
-          услуг
+          Предприятие «Проект Орион» предоставляет полный цикл инжиниринговых услуг
         </p>
         <p>
-          Высококвалифицированные специалисты ИТР осуществляют профессиональную деятельность, благодаря которой
-          компания
-          производит работы в установленные сроки и бюджет.</p>
+          Высококвалифицированные ИТР осуществляют профессиональную деятельность, благодаря которой компания производит работы в установленные сроки и бюджет.</p>
       </div>
     </div>
     <div class="img"></div>
@@ -29,15 +26,19 @@ export default {
 }
 
 .AboutPartBlock .img {
-  width: 30%;
+  width: 40%;
   min-height: 300px;
   background: transparent url("~assets/img/dd1.jpg") no-repeat center center/cover;
   margin-left: 10px;
 }
 
+.AboutPartBlock .verticalCenter{
+  width: 40%;
+}
+
 .AboutPartBlock .content {
-  width: 45%;
-  padding: 0 10% 0 0;
+  width: auto;
+  padding: 0 5% 0 0;
 }
 
 .AboutPartBlock .content p {

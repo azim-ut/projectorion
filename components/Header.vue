@@ -5,10 +5,10 @@
       &nbsp;
     </div>
     <div style="width: 100%;">
-      <div class="toggle">
+      <div class="toggle" @click="toggleMenu">
         <img src="~/assets/img/menu.svg" style="height: 2em;"/>
       </div>
-      <nav>
+      <nav v-if="displayMenu == null || displayMenu === true">
         <div id="marker"></div>
         <img src="~/assets/img/logo.svg" class='logo' />
         <ul>
@@ -34,12 +34,23 @@ export default {
     window.addEventListener('scroll', this.getWindowWidth)
     this.marker = document.querySelector('#marker')
     this.item = document.querySelector('nav a')
+    if(window.innerWidth < 768){
+      this.displayMenu = false
+    }
   },
   data: () => ({
+    displayMenu:null,
     marker: undefined,
     item: undefined
   }),
   methods: {
+    toggleMenu(){
+      if(this.displayMenu){
+        this.displayMenu = false;
+      }else {
+        this.displayMenu = true;
+      }
+    },
     indicator(e) {
       this.marker.style.top = (e.target.offsetTop + e.target.offsetHeight) + 30 + 'px'
       this.marker.style.left = e.target.offsetLeft + 'px'
@@ -58,6 +69,7 @@ export default {
   justify-content: right;
   align-items: flex-end;
   overflow: hidden;
+  transition: .5s;
 }
 
 #HeadMenu nav {
@@ -127,7 +139,7 @@ export default {
 
   #HeadMenu .toggle{
     display: block;
-    background: #fff url("~assets/img/logo_only.jpeg") no-repeat center center/contain;
+    background: #fff url("~assets/img/logo_only.jpeg") no-repeat left center/contain;
   }
 
   #HeadMenu nav ul{

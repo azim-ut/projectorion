@@ -7,7 +7,7 @@
           <div class="icon"><img src="~/assets/img/calc.svg" /></div>
         </div>
         <div class="text">
-          <h3>Проектирование</h3>
+          <h3 class="semibold">Проектирование</h3>
           <p>
             Определяется архитектура, компоненты и другие аспекты. Создаются
             сложные
@@ -22,7 +22,7 @@
           <div class="icon"><img src="~/assets/img/person.svg" /></div>
         </div>
         <div class="text">
-          <h3>Производство оборудования</h3>
+          <h3 class="semibold">Производство оборудования</h3>
           <p>
             Создается высокоточное техническое оснащение, полностью
             соответствующее
@@ -36,7 +36,7 @@
           <div class="icon"><img src="~/assets/img/star.svg" /></div>
         </div>
         <div class="text">
-          <h3>Организация процесса получения технических условий и
+          <h3 class="semibold">Организация процесса получения технических условий и
             дополнительных
             мощностей</h3>
           <p>
@@ -52,7 +52,7 @@
           <div class="icon"><img src="~/assets/img/todolist.svg" /></div>
         </div>
         <div class="text">
-          <h3>Согласование с надзорными оргнами</h3>
+          <h3 class="semibold">Согласование с надзорными оргнами</h3>
           <p>
             Подготавливаем бумаги на утверждение строений, архитектурных
             сооружений
@@ -66,7 +66,7 @@
           <div class="icon"><img src="~/assets/img/tools.svg" /></div>
         </div>
         <div class="text">
-          <h3>Строительно-монтажные (СМР) и пусконаладочные работы (ПНР)</h3>
+          <h3 class="semibold">Строительно-монтажные (СМР) и пусконаладочные работы (ПНР)</h3>
           <p>
             Возводим здания и сооружения, монтируем технологические
             системы и оборудование, проводим подготовительные работы перед сдачей объекта в эксплуатацию. Следуем
@@ -96,7 +96,7 @@ export default {}
 }
 
 .ServiceBlock .content .box .iconBlock {
-  display: flex;
+  width: 30%;
   justify-content: center;
   align-items: center;
 }
@@ -111,16 +111,12 @@ export default {}
   align-items: center;
   border-radius: 50%;
   transition: .3s;
+  border: red 2px solid;
 }
 
 .ServiceBlock .content .box .icon {
-  box-shadow: 0 0 0 0 #23e629;
-  background: #23e629;
-}
-
-.ServiceBlock .content .box:hover .icon {
-  box-shadow: 0 0 0 600px #23e629;
-  background: #23e629;
+  box-shadow: 0 0 0 0 #fff;
+  background: #fff;
 }
 
 .ServiceBlock .content .box .icon img {
@@ -134,8 +130,9 @@ export default {}
   margin: 1%;
   padding: 5%;
   background: #fff;
+  display: flex;
   float: left;
-  height: 400px;
+  height: 330px;
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
@@ -148,6 +145,10 @@ export default {}
 
 .ServiceBlock .content .box.wild{
   height: 200px;
+}
+
+.ServiceBlock .content .box.wild .icon{
+  border: none;
 }
 
 .ServiceBlock .content .box.wild:hover .icon,
@@ -167,6 +168,7 @@ export default {}
   position: relative;
   z-index: 1;
   transition: 0.5s;
+  width: 70%;
 }
 
 .ServiceBlock .content h3 {
@@ -179,16 +181,30 @@ export default {}
     width: 95%;
     margin: 3% 2.5% 0 2.5%;
     padding: 5%;
+    display: block;
     background: #fff;
+    height: auto;
+    text-align: center;
     float: left;
     position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
   }
+  .ServiceBlock .content .box .icon{
+    margin: 0 auto;
+  }
+
+  .ServiceBlock .content .box .iconBlock,
+  .ServiceBlock .content .box .text{
+    height: auto;
+    width: auto;
+    display: block;
+    padding: 5%;
+  }
 
   .ServiceBlock .content .box.wild{
     height: auto;
-    width: 95%;
+    width: auto;
     display: block;
     padding: 5%;
   }
