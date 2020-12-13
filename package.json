@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap-vue": "^2.19.0",
+    "bootstrap-vue": "^2.20.1",
     "jquery": "^3.5.1",
     "nuxt": "^2.14.7",
     "v-tooltip": "^2.0.3",

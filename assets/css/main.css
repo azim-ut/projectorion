@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'VisbyCF';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/VisbyCF-Bold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VisbyCF';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/VisbyCF-Light.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VisbyCF';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('~assets/fonts/VisbyCF-ExtraBold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VisbyCF';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('~assets/fonts/VisbyCF-DemiBold.otf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'VisbyCF', Arial, sans-serif;
+}
+
+
+.redText {
+    color: #ee2335 !important;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.redButton {
+    color: #040606;
+    border: 2px solid #ee2335;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 0px;
+    background: transparent;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.redButton:hover {
+    border: 2px solid #ee2335;
+    background: #ee2335;
+    color: #fff;
+}
+
+.divider{
+    padding: 1% 0;
+}
+
+.dotTitle{
+    font-size: .8em;
+}
+.dotTitle img{
+    height: 10px; line-height: 20px;
+}
+
+.verticalLeft {
+    position: relative;
+    width: 15%;
+}
+
+.verticalCenter {
+    position: relative;
+    width: 80%;
+}
+
+.verticalRight {
+    position: relative;
+    width: 5%;
+}
+
+
+.verticalLeft .txt,
+.verticalRight .txt{
+    padding: 0;
+    margin: 0px;
+    position: absolute;
+    transform: rotate(270deg);
+    color: black;
+    font-weight: 200;
+    bottom: 50%;
+    white-space: nowrap;
+}
+
+
+@media (max-width: 1100px) {
+
+    .verticalLeft {
+        width: 5%;
+    }
+
+    .verticalCenter {
+        width: 93%;
+    }
+
+    .verticalRight {
+        width: 2%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .verticalLeft {
+        display: none;
+    }
+
+    .verticalCenter {
+        width: 100%;
+    }
+
+    .verticalRight {
+        display: none;
+    }
+}

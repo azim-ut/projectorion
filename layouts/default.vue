@@ -3,8 +3,11 @@
     <Header />
     <Main />
     <About />
+    <div class="divider">&nbsp;</div>
     <Key />
+    <div class="divider">&nbsp;</div>
     <AboutPart />
+    <div class="divider">&nbsp;</div>
     <ServiceBegin />
     <Services />
     <Consultation />
@@ -13,6 +16,6 @@
     <Partners />
     <Partners2 />
     <Contacts />
-    <fixed />
+<!--    <fixed />-->
   </div>
 </template>

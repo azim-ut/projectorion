@@ -1,126 +1,113 @@
 <template>
-    <div class="partner">
-        <div id="partner" class="partner_inner">
-            <h1 class="font-weight-normal m-0">Наши партнеры:</h1>
-            <h1 class="font-weight-normal m-0" style="color: red;">инжиниринг Москва</h1>
-            <p class="font-weight-lighter mt-4">«Проект Орион» имеет партнерское соглашение с краснодарской компанией ООО «АС-Строй», занимающейся производством силового оборудования на территории РФ. Организация не только является разработчиком и производителем технического оснащения, но и предоставляет нам эксклюзивные права на представление и взаимодействие на территории северо-западной территории Российской Федерации.</p>
-            
-            <div class="container p-0 m-0 mt-3 pt-4">
-                <div class="row m-0">
+  <div id="partner" class="PartnerBlock">
+    <div class="verticalRight">&nbsp;</div>
+    <div class="verticalCenter">
+      <div class="content">
+        <h1 align="center">Наши партнеры:</h1>
+        <br/>
+        <div :class="item.text?'row long':'row'" v-for="item in items" :key="item.logo">
+          <a v-if="item.link" :href="item.link" target="_blank">
+            <img :src="item.logo" alt="Наши партнеры" />
+          </a>
+          <img v-if="!item.link" :src="item.logo" alt="Наши партнеры" />
 
-                    <div class="col table_img">
-                        <div class="p-3">
-                            <b-img src="~/assets/img/sch.png"></b-img>
-                        </div>
-                    </div>
-
-                    <div class="delete"></div>
-
-                    <div class="col table_img">
-                        <div class="p-3">
-                            <b-img src="~/assets/img/eae.png"></b-img>
-                        </div>
-                    </div>
-
-                    <div class="delete"></div>
-
-                    <div class="col table_img">
-                        <div class="p-3">
-                            <b-img src="~/assets/img/dkc.png"></b-img>
-                        </div>
-                    </div>
-
-                    <div class="w-100"></div>
-
-                    <div class="col table_img">
-                        <div class="p-3">
-                            <b-img src="~/assets/img/abb.png"></b-img>
-                        </div>
-                    </div>
-
-                    <div class="delete"></div>
-
-                    <div class="col table_img">
-                        <div class="p-3">
-                            <b-img src="~/assets/img/legrand.png"></b-img>
-                        </div>
-                    </div>
-                
-                    <div class="delete"></div>
-
-                    <div class="col table_img">
-                        <div class="p-3">
-                            <b-img src="~/assets/img/siem.png"></b-img>
-                         </div>
-                    </div>
-
-
-                </div>
-
-
-            </div>
-        
-        
+          <p v-if="item.text">
+            {{ item.text }}
+          </p>
         </div>
+      </div>
     </div>
+    <div class="verticalLeft">&nbsp;</div>
+  </div>
 </template>
 
 
 <script>
 export default {
 
+  data() {
+    return {
+      items: [
+        {
+          text: 'ООО «АС-Строй» (г.Краснодар) - крупнейший производитель силового оборудования на юге РФ. Наша компания имеет инвестиционно-партнерское соглашение с компанией АС-Строй на эксклюзивное представление и взаимодействие на территории северо-западного региона России.',
+          link: 'http://www.as-energo.ru',
+          logo: require('~/assets/img/ac_logo.png')
+        },
+        {
+          logo: require('~/assets/img/siem.png')
+        },
+        {
+          logo: require('~/assets/img/eae.png')
+        },
+        {
+          logo: require('~/assets/img/dkc.png')
+        },
+        {
+          logo: require('~/assets/img/abb.png')
+        },
+        {
+          logo: require('~/assets/img/legrand.png')
+        },
+        {
+          logo: require('~/assets/img/sch.png')
+        }
+      ]
+    }
+  }
 }
 </script>
 
 
-
 <style>
-    .partner{
-        font-family: 'Gilroy',Arial,sans-serif;
-        width: 100%;
-        position: relative;
-        top: 00px;
-        background-color: rgb(249,249,249);
-        height: 650px;
-        color: black;
-    }
-    .partner_inner{
-        width: 100%;
-        height: auto;
-        padding-left: 10%;
-        padding-top: 3%;
-    }
-    .partner_inner h1{
-        font-size: 2.8em;
-    }
-    .partner_inner p{
-        width: 65%;
-    }
-    .table_img{
-        height: auto;
-        width: 25%;
-        background-color: white;
-        margin-right: 40px;
-        margin-bottom: 40px;
-    }
-    .table_img img{
-        margin: 0;
-        width: 100%;
-        padding: 10% 20%; 
-    }
-    @media only screen and (max-width: 440px){
-        .partner{
-            top: 0px;
-            height: auto;
-        }
-        .partner_inner h1{
-            font-size: 2em;
-        }
-        .partner_inner p{
-            width: 85%;
-        }
-        .table_img{
-            width: 100%;
-        }
-    }
+.PartnerBlock {
+  display: flex;
+  width: 100%;
+  background: #fafafa;
+  padding: 5% 0 0;
+}
+
+.PartnerBlock .content {
+  align-items: center;
+}
+
+.PartnerBlock .content .row {
+  width: 45%;
+  margin: 0 2.5% 2.5%;
+  float: left;
+  height: 130px;
+  background: #fff;
+  padding: 2%;
+  text-align: center;
+}
+
+.PartnerBlock .content .row img {
+  width: 40%;
+}
+
+.PartnerBlock .content .row.long {
+  width: 95%;
+  display: flex;
+  height: auto;
+}
+
+.PartnerBlock .content .row.long a,
+.PartnerBlock .content .row.long img {
+  width: auto;
+}
+
+.PartnerBlock .content .row p {
+  padding-left: 5%;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .PartnerBlock .content .row.long {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  .PartnerBlock .content .row p{
+    margin: 5% 0;
+  }
+}
 </style>

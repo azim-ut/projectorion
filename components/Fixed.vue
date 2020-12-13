@@ -2,7 +2,7 @@
     <div>
         <div class="arrow" :class="{'arrow_fixed': screenSize > 800}">
             <a href="#app"><b-img src="~assets/img/up-arrow.png"></b-img></a>
-        </div>    
+        </div>
 
         <div @click="openForm()" :class="{'but_call_fix': isActive}" class="call">
             <b-img src="~assets/img/call.png"></b-img>
@@ -18,7 +18,7 @@
                 <input class="d-block mt-4 mb-2" type="text" placeholder="+7(000)000 0000">
                 <button class="d-block">Перезвонить</button>
                 <p class="d-block font-weight-light mt-4 mb-0">Либо позвоните нам по номеру:</p>
-                <p class="d-block font-weight-bold m-0">+7 (921) 943-91-72</p>
+                <p class="d-block font-weight-bold m-0">8 (800) 550-31-93</p>
             </div>
         </div>
 
@@ -51,7 +51,7 @@ export default{
   methods: {
     getWindowWidth() {
       this.screenSize= window.pageYOffset;
-      
+
       if(window.pageYOffset < '720'){
             this.$refs.app_tool_tip.style.backgroundColor = 'red';
             this.$refs.about_tool_tip.style.backgroundColor = 'transparent';
@@ -133,8 +133,8 @@ export default{
             this.$refs.contact_tool_tip.style.backgroundColor = 'red';
       }
 
-      
-    }, 
+
+    },
     openForm(){
         this.isActive = !this.isActive
     }
@@ -194,8 +194,8 @@ export default{
         text-align: center;
         align-content: center;
         background-color: rgb(249,249,249);
-        transition: 0.3s all ease; 
-        border-radius: 5px;  
+        transition: 0.3s all ease;
+        border-radius: 5px;
         box-shadow: 0px 0px 30px 10px lightgrey;
     }
     .call_form button{
@@ -203,7 +203,6 @@ export default{
         color: white;
         background-color: rgb(229,39,41);
         border: 0px;
-        font-weight: 300;
         padding: 13px 30px;
     }
     .call_form input{
@@ -251,7 +250,6 @@ export default{
             left: 25%;
             bottom: 15%;
             width: 260px;
-            height: 300px;   
         }
         .nav_points{
             display: none;

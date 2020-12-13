@@ -1,34 +1,33 @@
 <template>
-    <div id="app" class="cons">
-        <p class="cons_vertical text-uppercase font-weight-light">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</p>
-        <div id="cons" class="cons_cont">
-            <p class="cons_text h1 font-weight-normal">Получите бесплатную консультацию у наших специалистов</p>
-            <p class="cons_pre_link font-weight-light mt-4">Работа и ее технология, инжиниринг, проектирование, строительство – услуги, которые имеют свои регламенты и особенности предоставления. Получить по ним консультацию вы можете у наших специалистов, набрав по номеру:<a href="tel:89219439172"> +7 (921) 943-91-72</a></p>
-            
-            <div class="form m-0">
-                <input class="cons_input_name mr-2" ref="input_name" v-model="name" type="text" placeholder="Ваше имя" required>
-                <input class="cons_input_tel mr-2" ref="input_tel" maxlength=13 @input="acceptNumber" v-model="tel" type="tel" placeholder="Телефон" required>
-                <input class="cons_input_email mr-2" ref="input_mail" v-model="mail" type="mail" placeholder="E-mail" required>
-                <b-button squared class="cons_but font-weight-normal" @click='openForm'>Получить консультацию</b-button>
-            </div>
-
-            <p class="cons_small_text font-weight-light mt-2 pb-1 pb-5">Нажимая на кнопку «Получить консультацию» вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
- 
+  <div class="ConsultationBlock">
+    <div class="verticalLeft">
+      <div class="txt">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</div>
+    </div>
+    <div class="verticalCenter">
+      <div class="content">
+        <h3>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</h3>
+        <br/>
+        <p>по телефону:<a href="tel:88005503193" style=" color: #fff; font-size: 2.2em;"> 8 (800) 550-31-93</a> или форме обратной связи: </p>
+        <div class="form m-0">
+          <input class="cons_input_name mr-2" ref="input_name" type="text" placeholder="Ваше имя" required>
+          <input class="cons_input_tel mr-2" ref="input_tel" maxlength=13 type="tel" placeholder="Телефон" required>
+          <input class="cons_input_email mr-2" ref="input_mail" type="mail" placeholder="E-mail" required>
+          <button class="cons_but font-weight-normal" @click='openForm'>Получить консультацию</button>
         </div>
-  
-    <div class="form_errors" ref="form_error" :class="{'form_error_active': isActiveForm}">
-        <p class="form_x m-0 p-0" @click="closeForm">x</p>
-        <div class="px-3 pb-2 m-0">
+        <small>Нажимая на кнопку «Получить консультацию» вы соглашаетесь с <a href="#">политикой конфиденциальности</a></small>
+        <div class="form_errors" ref="form_error" :class="{'form_error_active': isActiveForm}">
+          <p class="form_x m-0 p-0" @click="closeForm">x</p>
+          <div class="px-3 pb-2 m-0">
             <p v-for="value in errors" :key="value.i">
-                {{ value }}
+              {{ value }}
             </p>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
+  </div>
 </template>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script>
 export default{
     data() {
@@ -46,7 +45,7 @@ export default{
                 this.closeForm()
                 this.openForm()
                 this.isActiveForm = !this.isActiveForm
-                
+
             }
 
             this.errors = []
@@ -56,7 +55,7 @@ export default{
                 this.$refs.input_tel.style.border = '1px solid red'
                 this.$refs.input_mail.style.border = '1px solid red'
             }
-            
+
             if (!this.mail == ''){
                 this.errors.push('Укажите, пожалуйста, корректный email')
                 this.$refs.input_mail.style.border = '1px solid red'
@@ -78,7 +77,7 @@ export default{
                 this.errors.pop('Укажите, пожалуйста, корректный email')
                 this.$refs.input_mail.style.border = '0px solid red'
             }
-           
+
 
             if (!this.errors.length == 0){
                 this.isActiveForm = !this.isActiveForm
@@ -87,11 +86,11 @@ export default{
             if(this.errors.length == 0){
                 this.isActiveForm = false
             }
-            
-            
-             
-          
-           
+
+
+
+
+
        },
        closeForm: function(){
            this.isActiveForm = !this.isActiveForm
@@ -99,7 +98,7 @@ export default{
        },
        acceptNumber: function() {
             var x = this.tel.replace(/(\d{3})(\d{3})(\d{4})/, " ($1) $2-$3");
-            this.tel = x 
+            this.tel = x
         },
     }
 }
@@ -107,37 +106,30 @@ export default{
 
 
 <style>
-    .cons{
-        font-family: 'Gilroy',Arial,sans-serif;
-        position: relative;
-        top: 0px;
-        background-color: rgb(249,249,249);
-        width: 100%;
-        height: 650px;
+    .ConsultationBlock{
+      width: 100%;
+      display: flex;
+      padding: 5% 0;
+      background: #fafafa;
     }
-    .cons_cont{
-        width: 89%;
-        margin-left: 11%;
-        margin-top: 5%;
-        padding-top: 7%;
-        padding-left: 7%;
-        background: url("~assets/img/background_elec.jpg") no-repeat;
+    .ConsultationBlock .verticalCenter{
+      width: 100%;
     }
-    .cons_cont p{
-        width: 60%;
-        color: white;
+
+    .ConsultationBlock .content *{
+      color: #fff;
     }
-    .cons_vertical{
-        position: relative;
-        top: -40%;
-        left: -41%;
-        -webkit-transform: rotate(270deg); 
-        transform: rotate(270deg);
-        font-size: 0.8em;
+
+    .ConsultationBlock .content p{
+      line-height: 60px;
     }
-    .cons_pre_link{
-        line-height: 26px;
+
+    .ConsultationBlock .content{
+      background: url("~assets/img/1001480308_1.jpg") no-repeat fixed;
+      min-height: 70vh;
+      padding: 10%;
     }
+
     .cons_pre_link a{
         text-decoration: none;
         color: red;
