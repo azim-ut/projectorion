@@ -4,7 +4,7 @@
       <div class="txt">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</div>
     </div>
     <div class="verticalCenter">
-      <div class="content">
+      <div class="content" id="cons">
         <h3>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</h3>
         <br />
         <p>по телефону:<a href="tel:88005503193" style=" color: #fff; font-size: 2.2em;"> 8 (800) 550-31-93</a> или
@@ -13,7 +13,7 @@
           <input class="cons_input_name mr-2" ref="input_name" type="text" placeholder="Ваше имя" required>
           <input class="cons_input_tel mr-2" ref="input_tel" maxlength=13 type="tel" placeholder="Телефон" required>
           <input class="cons_input_email mr-2" ref="input_mail" type="mail" placeholder="E-mail" required>
-          <button class="cons_but font-weight-normal" @click='openForm'>Получить консультацию</button>
+          <button class="cons_but font-weight-normal" @click='submitForm'>Получить консультацию</button>
         </div>
         <small>Нажимая на кнопку «Получить консультацию» вы соглашаетесь с <a href="#">политикой конфиденциальности</a></small>
         <div class="form_errors" ref="form_error" :class="{'form_error_active': isActiveForm}">
@@ -30,65 +30,25 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data() {
     return {
-      name: '',
-      tel: '+7 ',
-      mail: '',
-      errors: [],
+      form: {
+        name: '',
+        tel: '+7 ',
+        mail: '',
+        errors: []
+      },
       isActiveForm: false
     }
   },
   methods: {
-    openForm: function() {
-      if (this.isActiveForm == true && !this.errors.length == 0) {
-        this.closeForm()
-        this.openForm()
-        this.isActiveForm = !this.isActiveForm
-
-      }
-
-      this.errors = []
-      if (this.name == '' || this.tel == '' || this.mail == '') {
-        this.errors.push('Пожалуйста, заполните все обязательные поля')
-        this.$refs.input_name.style.border = '1px solid red'
-        this.$refs.input_tel.style.border = '1px solid red'
-        this.$refs.input_mail.style.border = '1px solid red'
-      }
-
-      if (!this.mail == '') {
-        this.errors.push('Укажите, пожалуйста, корректный email')
-        this.$refs.input_mail.style.border = '1px solid red'
-      }
-      if (this.tel.length < 12) {
-        this.tel = ''
-      }
-
-      if (!this.name == '') {
-        this.$refs.input_name.style.border = '0px solid red'
-      }
-
-      if (!this.tel == '') {
-        this.$refs.input_tel.style.border = '0px solid red'
-      }
-
-
-      if (!this.mail == '' && (this.mail.includes('@') && (this.mail.includes('ru') || this.mail.includes('kz') || this.mail.includes('com')))) {
-        this.errors.pop('Укажите, пожалуйста, корректный email')
-        this.$refs.input_mail.style.border = '0px solid red'
-      }
-
-
-      if (!this.errors.length == 0) {
-        this.isActiveForm = !this.isActiveForm
-      }
-
-      if (this.errors.length == 0) {
-        this.isActiveForm = false
-      }
-
-
+    submitForm: function() {
+      axios.post('../engine/shop/rest/box/create', this.form).then(({ data }) => {
+        window.console.log(data)
+      })
     },
     closeForm: function() {
       this.isActiveForm = !this.isActiveForm
@@ -119,13 +79,17 @@ export default {
   color: #fff;
 }
 
+.ConsultationBlock .content input {
+  color: #000;
+}
+
 .ConsultationBlock .content p {
   line-height: 60px;
 }
 
 .ConsultationBlock .content {
   background: url("~assets/img/1001480308_1.jpg") no-repeat fixed;
-  padding: 5%;
+  padding: 8% 5%;
 }
 
 .cons_pre_link a {

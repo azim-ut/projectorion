@@ -4,7 +4,7 @@
     <div class="verticalLeft">
       &nbsp;
     </div>
-    <div style="width: 100%;">
+    <div class="verticalCenter">
       <div class="toggle" @click="toggleMenu">
         <img src="~/assets/img/menu.svg" style="height: 2em;"/>
       </div>
@@ -18,10 +18,15 @@
           <li><a href="#partner" @click="indicator($event)">Партнеры</a></li>
           <li><a href="#contact" @click="indicator($event)">Контакты</a></li>
           <li>
+            <a href="#cons" style="margin: 0;">
             <button class="redButton">Связаться с нами</button>
+            </a>
           </li>
         </ul>
       </nav>
+    </div>
+    <div class="verticalRight">
+      &nbsp;
     </div>
   </div>
 </template>
@@ -76,12 +81,12 @@ export default {
   position: relative;
   display: flex;
   width: 100%;
-  padding: 40px 20px;
+  padding: 40px 0;
   transition: .5s;
 }
 
 #HeadMenu nav ul{
-  float: right; padding: 0; margin: 0 auto;
+  float: right; padding: 0; margin: 0 0 0 auto;
   transition: .5s;
 }
 

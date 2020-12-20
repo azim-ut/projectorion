@@ -46,12 +46,20 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     // 'bootstrap-vue/nuxt'
     // https://go.nuxtjs.dev/axios
-    //'@nuxtjs/axios',
+    '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     //'@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     //'@nuxt/content',
   ],
+  proxy: {
+    '/engine': {
+      target: 'http://projectorion/engine'
+    },
+    '/files': {
+      target: 'http://projectorion'
+    }
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},

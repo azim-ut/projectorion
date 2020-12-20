@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nuxtjs/axios": "^5.12.4",
     "bootstrap-vue": "^2.20.1",
     "jquery": "^3.5.1",
     "nuxt": "^2.14.7",

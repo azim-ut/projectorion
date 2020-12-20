@@ -4,7 +4,12 @@
       <div class="txt">Инжиниринговая компания</div>
     </div>
     <div class="verticalCenter mainBannerContent">
+      <video width="100%" height="100%" autoplay muted id="myVideo">
+        <source src="~/assets/video/logo.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
       <div class="content">
+
         <p class="h3">Инжиниринговая компания</p>
         <p class="h1 redText semibold">PROJECT ORION</p>
         <p class="h3 semibold">Качество имеет значение!</p>
@@ -36,9 +41,21 @@ export default {
   display: flex;
 }
 
+#myVideo {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  background: #000;
+}
+
 .mainBannerContent {
   background: url("~assets/img/background.jpg") no-repeat fixed;
-  min-height: 80vh;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 .many_points {
@@ -51,6 +68,11 @@ export default {
 .mainBannerContent .content {
   margin: 100px;
   overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  padding: 40px;
 }
 
 .mainBannerContent p {
