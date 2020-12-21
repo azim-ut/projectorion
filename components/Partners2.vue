@@ -45,7 +45,7 @@ export default {}
 .Partners2 {
   padding: 5%;
   width: 100%;
-  background: url("~assets/img/backgroundlast.jpg") no-repeat;
+  background: url("/img/backgroundlast.jpg") no-repeat;
   color: #fff;
 }
 

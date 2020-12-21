@@ -1,11 +1,11 @@
 <template>
     <div>
         <div class="arrow" :class="{'arrow_fixed': screenSize > 800}">
-            <a href="#app"><b-img src="~assets/img/up-arrow.png"></b-img></a>
+            <a href="#app"><img src="/img/up-arrow.png"></a>
         </div>
 
         <div @click="openForm()" :class="{'but_call_fix': isActive}" class="call">
-            <b-img src="~assets/img/call.png"></b-img>
+            <img src="/img/call.png">
         </div>
 
          <div @click="openForm()" :class="{'but_call_x': isActive}" class="call call_x">

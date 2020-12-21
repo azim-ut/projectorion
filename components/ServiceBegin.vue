@@ -5,7 +5,7 @@
     <div class="verticalCenter">
       <div class="content">
         <div class="dotTitle">
-          <img src="~/assets/img/point.png" /> УСЛУГИ
+          <img src="/img/point.png" /> УСЛУГИ
         </div>
         <p class="head">Компания предоставляет полный спектр услуг,
           связанных с инжинирингом</p>
@@ -44,7 +44,7 @@ export default {
   height: 30%;
   right: -20%;
   top: 5%;
-  background: transparent url("~assets/img/g10.svg") no-repeat 0 0/cover;
+  background: transparent url("/img/g10.svg") no-repeat 0 0/cover;
 }
 
 .ServiceBeginBlock .content {

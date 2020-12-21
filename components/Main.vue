@@ -1,14 +1,17 @@
 <template>
   <div class="mainBanner">
+    <div :class="showVideo?'':'hideVideo'"
+         style="width: 100%; position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 10;">
+      <video width="100%" height="100%" autoplay muted id="myVideo" @ended="onVideoFinished">
+        <source src="/video/logo.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
     <div class="verticalLeft">
       <div class="txt">Инжиниринговая компания</div>
     </div>
     <div class="verticalCenter mainBannerContent">
-      <video width="100%" height="100%" autoplay muted id="myVideo">
-        <source src="~/assets/video/logo.webm" type="video/webm">
-        Your browser does not support the video tag.
-      </video>
-      <div class="content">
+      <div class="content" v-if="showContent">
 
         <p class="h3">Инжиниринговая компания</p>
         <p class="h1 redText semibold">PROJECT ORION</p>
@@ -25,15 +28,37 @@
     </div>
     <div class="verticalRight">
       &nbsp;
-      <img class="many_points" src="~assets/img/points.svg" alt="Many points image" />
+      <img class="many_points" src="/img/points.svg" alt="Many points image" />
     </div>
   </div>
 </template>
+<script>
 
-export default {
 
+function myHandler(e) {
+  // What you want to do after the event
 }
 
+export default {
+  mounted() {
+    if (this.showVideo) {
+
+    }
+  },
+  data() {
+    return {
+      showVideo: true,
+      showContent: false
+    }
+  },
+  methods: {
+    onVideoFinished() {
+      this.showVideo = false
+      this.showContent = true
+    }
+  }
+}
+</script>
 
 <style>
 .mainBanner {
@@ -49,10 +74,26 @@ export default {
   min-width: 100%;
   min-height: 100vh;
   background: #000;
+  opacity: 1;
+}
+
+.hideVideo {
+  opacity: 0;
+  transition: .5s;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: -10 !important;
+}
+
+.hideVideo video {
+  height: 0;
+  min-height: 0;
 }
 
 .mainBannerContent {
-  background: url("~assets/img/background.jpg") no-repeat fixed;
+  background: url("/img/background.jpg") no-repeat fixed;
   min-height: 100vh;
   overflow: hidden;
   position: relative;
@@ -68,9 +109,8 @@ export default {
 .mainBannerContent .content {
   margin: 100px;
   overflow: hidden;
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  bottom: 100px;
+  background: rgba(0, 0, 0, .5);
   color: #f1f1f1;
   padding: 40px;
 }
@@ -86,7 +126,7 @@ export default {
 }
 
 .mainBannerContent .h1 {
-  font-size: 3em;
+  font-size: 2.6em;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -116,7 +156,7 @@ export default {
   }
 
   .mainBannerContent {
-    background: url("~assets/img/background.jpg") no-repeat center center;
+    background: url("/img/background.jpg") no-repeat center center;
     min-height: auto;
   }
 

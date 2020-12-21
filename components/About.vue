@@ -4,7 +4,7 @@
     <div class="verticalCenter About">
       <div class="content">
         <div class="dotTitle">
-          <img src="~/assets/img/point.png" /> О НАС
+          <img src="/img/point.png" /> О НАС
         </div>
 
         <p class="head">

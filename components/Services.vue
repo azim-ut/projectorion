@@ -4,7 +4,7 @@
     <div class="content">
       <div class="box">
         <div class="iconBlock">
-          <div class="icon"><img src="~/assets/img/calc.svg" /></div>
+          <div class="icon"><img src="/img/calc.svg" /></div>
         </div>
         <div class="text">
           <h3 class="semibold">Проектирование</h3>
@@ -19,7 +19,7 @@
       </div>
       <div class="box">
         <div class="iconBlock">
-          <div class="icon"><img src="~/assets/img/person.svg" /></div>
+          <div class="icon"><img src="/img/person.svg" /></div>
         </div>
         <div class="text">
           <h3 class="semibold">Производство оборудования</h3>
@@ -33,7 +33,7 @@
       </div>
       <div class="box">
         <div class="iconBlock">
-          <div class="icon"><img src="~/assets/img/star.svg" /></div>
+          <div class="icon"><img src="/img/star.svg" /></div>
         </div>
         <div class="text">
           <h3 class="semibold">Организация процесса получения технических условий и
@@ -49,7 +49,7 @@
       </div>
       <div class="box">
         <div class="iconBlock">
-          <div class="icon"><img src="~/assets/img/todolist.svg" /></div>
+          <div class="icon"><img src="/img/todolist.svg" /></div>
         </div>
         <div class="text">
           <h3 class="semibold">Согласование с надзорными оргнами</h3>
@@ -63,7 +63,7 @@
       </div>
       <div class="box wild">
         <div class="iconBlock">
-          <div class="icon"><img src="~/assets/img/tools.svg" /></div>
+          <div class="icon"><img src="/img/tools.svg" /></div>
         </div>
         <div class="text">
           <h3 class="semibold">Строительно-монтажные (СМР) и пусконаладочные работы (ПНР)</h3>

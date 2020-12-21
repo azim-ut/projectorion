@@ -53,8 +53,11 @@ export default {
     //'@nuxt/content',
   ],
   proxy: {
-    '/engine': {
-      target: 'http://projectorion/engine'
+    '/core': {
+      target: 'http://projectorion/core'
+    },
+    '/blog': {
+      target: 'http://projectorion/blog'
     },
     '/files': {
       target: 'http://projectorion'

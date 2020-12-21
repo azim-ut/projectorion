@@ -11,7 +11,7 @@
           форме обратной связи: </p>
         <div class="form m-0">
           <input class="cons_input_name mr-2" ref="input_name" type="text" placeholder="Ваше имя" required>
-          <input class="cons_input_tel mr-2" ref="input_tel" maxlength=13 type="tel" placeholder="Телефон" required>
+          <input class="cons_input_tel mr-2" ref="input_phone" maxlength=13 type="tel" placeholder="Телефон" required>
           <input class="cons_input_email mr-2" ref="input_mail" type="mail" placeholder="E-mail" required>
           <button class="cons_but font-weight-normal" @click='submitForm'>Получить консультацию</button>
         </div>
@@ -19,9 +19,7 @@
         <div class="form_errors" ref="form_error" :class="{'form_error_active': isActiveForm}">
           <p class="form_x m-0 p-0" @click="closeForm">x</p>
           <div class="px-3 pb-2 m-0">
-            <p v-for="value in errors" :key="value.i">
-              {{ value }}
-            </p>
+
           </div>
         </div>
       </div>
@@ -37,7 +35,7 @@ export default {
     return {
       form: {
         name: '',
-        tel: '+7 ',
+        phone: '',
         mail: '',
         errors: []
       },
@@ -46,7 +44,7 @@ export default {
   },
   methods: {
     submitForm: function() {
-      axios.post('../engine/shop/rest/box/create', this.form).then(({ data }) => {
+      axios.post('/core/rest/help/callback', this.form).then(({ data }) => {
         window.console.log(data)
       })
     },
@@ -55,8 +53,8 @@ export default {
       this.errors = []
     },
     acceptNumber: function() {
-      var x = this.tel.replace(/(\d{3})(\d{3})(\d{4})/, ' ($1) $2-$3')
-      this.tel = x
+      var x = this.phone.replace(/(\d{3})(\d{3})(\d{4})/, ' ($1) $2-$3')
+      this.phone = x
     }
   }
 }
@@ -88,7 +86,7 @@ export default {
 }
 
 .ConsultationBlock .content {
-  background: url("~assets/img/1001480308_1.jpg") no-repeat fixed;
+  background: url("/img/1001480308_1.jpg") no-repeat fixed;
   padding: 8% 5%;
 }
 

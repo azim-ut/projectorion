@@ -31,25 +31,25 @@ export default {
         {
           text: 'ООО «АС-Строй» (г.Краснодар) - крупнейший производитель силового оборудования на юге РФ. Наша компания имеет инвестиционно-партнерское соглашение с компанией АС-Строй на эксклюзивное представление и взаимодействие на территории северо-западного региона России.',
           link: 'http://www.as-energo.ru',
-          logo: require('~/assets/img/ac_logo_2_100.JPG')
+          logo: '/img/ac_logo_2_100.JPG'
         },
         {
-          logo: require('~/assets/img/siem.png')
+          logo: '/img/siem.png'
         },
         {
-          logo: require('~/assets/img/eae.png')
+          logo: '/img/eae.png'
         },
         {
-          logo: require('~/assets/img/dkc.png')
+          logo: '/img/dkc.png'
         },
         {
-          logo: require('~/assets/img/abb.png')
+          logo: '/img/abb.png'
         },
         {
-          logo: require('~/assets/img/legrand.png')
+          logo: '/img/legrand.png'
         },
         {
-          logo: require('~/assets/img/sch.png')
+          logo: '/img/sch.png'
         }
       ]
     }

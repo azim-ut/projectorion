@@ -21,7 +21,7 @@
           индивидуальный подход к каждому проекту.
         </p>
         <div class="buttonFrame">
-          <b-button squared class="redButton">Получить консультацию</b-button>
+          <button squared class="redButton">Получить консультацию</button>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@ export default {
 .keyBlock .img {
   width: 40%;
   min-height: 300px;
-  background: transparent url("~assets/img/worker.jpg") no-repeat center center/cover;
+  background: transparent url("/img/worker.jpg") no-repeat center center/cover;
   margin-left: 10px;
 }
 

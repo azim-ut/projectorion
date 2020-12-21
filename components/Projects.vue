@@ -6,7 +6,7 @@
 
       <div class="verticalCenter Project">
         <div class="dotTitle">
-          <img src="~/assets/img/point.png" /> ПРОЕКТЫ
+          <img src="/img/point.png" /> ПРОЕКТЫ
         </div>
         <div class="content">
           <h2>
@@ -32,13 +32,13 @@
 
           <template v-slot:nav-prev>
             <div>
-              <b-img class="img_turn" src="~assets/img/left.png"></b-img>
+              <img class="img_turn" src="/img/left.png">
             </div>
           </template>
 
           <template v-slot:nav-next>
             <div>
-              <b-img class="img_turn" src="~assets/img/next.png"></b-img>
+              <img class="img_turn" src="/img/next.png">
             </div>
           </template>
 
@@ -76,22 +76,22 @@ export default {
         {
           title: 'ООО «Армада»',
           content: 'Работы по монтажу и пуско-наладке систем внешнего энергоснабжения 10/0,4 кВ (г.Каспийск).',
-          image: require('~/assets/img/monopoly_sm.jpg')
+          image: '/img/monopoly_sm.jpg'
         },
         {
           title: 'ООО «Титан Полимер»',
           content: 'Работы по монтажу систем 10/0,4 кВ, монтаж кабельных систем и лоточных трасс, монтаж освещения, монтаж слаботочных систем (г.Псков).',
-          image: require('~/assets/img/monopoly_sm.jpg')
+          image: '/img/monopoly_sm.jpg'
         },
         {
           title: 'ГК Росстройинвест (РСТИ)',
           content: 'Монтаж систем внутреннего электроснабжения.',
-          image: require('~/assets/img/monopoly_sm.jpg')
+          image: '/img/monopoly_sm.jpg'
         },
         {
           title: 'Министерство Обороны РФ',
           content: 'Монтаж систем внешнего энергоснабжения 10/0,4 кВ.',
-          image: require('~/assets/img/monopoly_sm.jpg')
+          image: '/img/monopoly_sm.jpg'
         }
       ],
       options: {

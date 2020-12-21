@@ -28,7 +28,7 @@ export default {
 .AboutPartBlock .img {
   width: 40%;
   min-height: 300px;
-  background: transparent url("~assets/img/dd1.jpg") no-repeat center center/cover;
+  background: transparent url("/img/dd1.jpg") no-repeat center center/cover;
   margin-left: 10px;
 }
 

@@ -110,7 +110,7 @@ export default {}
 }
 
 .table_cont_sub {
-  background: url("~assets/img/sent.png") no-repeat rgb(229, 39, 41) center center;
+  background: url("/img/sent.png") no-repeat rgb(229, 39, 41) center center;
   width: 50px;
   height: 40px;
   background-size: 50%;

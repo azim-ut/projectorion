@@ -6,11 +6,11 @@
     </div>
     <div class="verticalCenter">
       <div class="toggle" @click="toggleMenu">
-        <img src="~/assets/img/menu.svg" style="height: 2em;"/>
+        <img src="/img/menu.svg" style="height: 2em;"/>
       </div>
       <nav v-if="displayMenu == null || displayMenu === true">
         <div id="marker"></div>
-        <img src="~/assets/img/logo.svg" class='logo' />
+        <img src="/img/logo.svg" class='logo' />
         <ul>
           <li><a href="#about" @click="indicator($event)">О нас</a></li>
           <li><a href="#opt" @click="indicator($event)">Услуги</a></li>
@@ -144,7 +144,7 @@ export default {
 
   #HeadMenu .toggle{
     display: block;
-    background: #fff url("~assets/img/logo_only.jpeg") no-repeat left center/contain;
+    background: #fff url("/img/logo_only.jpeg") no-repeat left center/contain;
   }
 
   #HeadMenu nav ul{
