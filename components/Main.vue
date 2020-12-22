@@ -3,7 +3,7 @@
     <div :class="showVideo?'':'hideVideo'"
          @click="onVideoFinished"
          style="width: 100%; position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 10;">
-      <video width="100%" height="100%" autoplay muted id="myVideo" @ended="onVideoFinished">
+      <video width="100%" height="100%" autoplay playsinline muted id="myVideo" @ended="onVideoFinished">
         <source src="/video/logo.webm" type="video/webm">
         <source src="/video/logo.mov" type="video/mov">
         <source src="/video/logo.mp4" type="video/mp4">
@@ -45,7 +45,12 @@ function myHandler(e) {
 export default {
   mounted() {
     if (this.showVideo) {
-
+      const videoElement = document.getElementById('myVideo')
+      if (videoElement.playing) {
+        // video is already playing so do nothing
+      } else {
+        videoElement.play()
+      }
     }
   },
   data() {
