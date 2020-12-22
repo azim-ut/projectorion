@@ -3,11 +3,11 @@
     <Header />
     <Main />
     <About />
-    <div class="divider">&nbsp;</div>
+    <div class="divider contentBlock">&nbsp;</div>
     <Key />
-    <div class="divider">&nbsp;</div>
+    <div class="divider contentBlock">&nbsp;</div>
     <AboutPart />
-    <div class="divider">&nbsp;</div>
+    <div class="divider contentBlock">&nbsp;</div>
     <ServiceBegin />
     <Services />
     <Consultation />

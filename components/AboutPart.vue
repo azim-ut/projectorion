@@ -1,5 +1,5 @@
 <template>
-  <div class="AboutPartBlock">
+  <div class="AboutPartBlock contentBlock">
     <div class="verticalLeft"></div>
     <div class="verticalCenter">
       <div class="content">

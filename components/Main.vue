@@ -1,8 +1,9 @@
 <template>
   <div class="mainBanner">
-    <div :class="showVideo?'':'hideVideo'"
+    <div :class="showVideo?'showVideo':'hideVideo'"
          @click="onVideoFinished"
          style="width: 100%; position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 10;">
+      <small class="clickZone">Кликните чтобы пропустить</small>
       <video width="100%" height="100%" autoplay playsinline muted id="myVideo" @ended="onVideoFinished">
         <source src="/video/logo.webm" type="video/webm">
         <source src="/video/logo.mov" type="video/mov">
@@ -46,10 +47,15 @@ export default {
   mounted() {
     if (this.showVideo) {
       const videoElement = document.getElementById('myVideo')
-      if (videoElement.playing) {
-        // video is already playing so do nothing
-      } else {
-        videoElement.play()
+      const body = document.getElementsByTagName('body')[0]
+      window.console.log(body.classList)
+      if(videoElement){
+        body.classList.add("video");
+        if (videoElement.playing) {
+          // video is already playing so do nothing
+        } else {
+          videoElement.play()
+        }
       }
     }
   },
@@ -61,8 +67,10 @@ export default {
   },
   methods: {
     onVideoFinished() {
+      const body = document.getElementsByTagName('body')[0]
       this.showVideo = false
       this.showContent = true
+      body.classList.remove("video");
     }
   }
 }
@@ -83,6 +91,15 @@ export default {
   min-height: 100vh;
   background: #000;
   opacity: 1;
+}
+
+.showVideo .clickZone {
+  font-size: small;
+  position: absolute;
+  right: calc(50% - 80px);
+  bottom: 20px;
+  color: #7c7c7c;
+  text-decoration: underline;
 }
 
 .hideVideo {

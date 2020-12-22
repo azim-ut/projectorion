@@ -1,5 +1,5 @@
 <template>
-  <div id="partner" class="PartnerBlock">
+  <div id="partner" class="PartnerBlock contentBlock">
     <div class="verticalLeft">&nbsp;</div>
     <div class="verticalCenter">
       <div class="content">

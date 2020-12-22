@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="contentBlock">
         <div class="arrow" :class="{'arrow_fixed': screenSize > 800}">
             <a href="#app"><img src="/img/up-arrow.png"></a>
         </div>

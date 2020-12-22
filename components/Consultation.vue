@@ -1,5 +1,5 @@
 <template>
-  <div class="ConsultationBlock">
+  <div class="ConsultationBlock contentBlock">
     <div class="verticalLeft">
       <div class="txt">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</div>
     </div>

@@ -35,6 +35,10 @@ body {
     overflow-x: hidden;
 }
 
+body.video .contentBlock{
+    display: none;
+}
+
 * {
     margin: 0;
     padding: 0;

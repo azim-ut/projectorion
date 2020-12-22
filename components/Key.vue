@@ -1,5 +1,5 @@
 <template>
-  <div class="keyBlock">
+  <div class="keyBlock contentBlock">
     <div class="verticalLeft">
       <div class="txt">Работаем "под ключ"</div>
     </div>

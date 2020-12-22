@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="contentBlock">
     <div id="proj" class="projectBlock">
 
       <div class="verticalLeft">&nbsp;</div>

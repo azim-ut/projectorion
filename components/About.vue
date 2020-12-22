@@ -1,5 +1,5 @@
 <template>
-  <div class="aboutBlock" style="display: flex; width: 100%; z-index: 100;">
+  <div class="aboutBlock contentBlock" style="display: flex; width: 100%; z-index: 100;">
     <div class="verticalLeft">&nbsp;</div>
     <div class="verticalCenter About">
       <div class="content">

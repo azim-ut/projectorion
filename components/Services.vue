@@ -1,5 +1,5 @@
 <template>
-  <div class="ServiceBlock">
+  <div class="ServiceBlock contentBlock">
     <div class="verticalLeft"></div>
     <div class="content">
       <div class="box">

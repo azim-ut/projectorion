@@ -1,5 +1,5 @@
 <template>
-  <div class="Partners2Block">
+  <div class="Partners2Block contentBlock">
     <div class="verticalLeft">
       <div class="txt">ИНЖИНИРИНГОВАЯ КОМПАНИЯ</div>
     </div>

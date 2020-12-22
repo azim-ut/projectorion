@@ -1,6 +1,6 @@
 <template>
 
-  <div id="HeadMenu">
+  <div id="HeadMenu" class="contentBlock">
     <div class="verticalLeft">
       &nbsp;
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="AdvantageBlock" id="adv">
+  <div class="AdvantageBlock contentBlock" id="adv">
     <div class="verticalRight">&nbsp;</div>
 
     <div class="verticalCenter">
