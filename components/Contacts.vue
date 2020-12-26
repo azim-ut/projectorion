@@ -5,12 +5,12 @@
 
         <div class="col">
           <div class="p-3">
-            <p>НАВИГАЦИЯ</p>
+            <p><Bundle :target="'NAVIGATION'"/></p>
             <ul>
-              <li>О нас</li>
-              <li>Услуги</li>
-              <li>Проекты</li>
-              <li>© 2020 Все права защищены</li>
+              <li><Bundle :target="'MENU_ABOUT'"/></li>
+              <li><Bundle :target="'MENU_SERVICES'"/></li>
+              <li><Bundle :target="'MENU_PROJECTS'"/></li>
+              <li>© 2021 <Bundle :target="'RIGHTS'"/></li>
             </ul>
 
           </div>
@@ -20,31 +20,31 @@
           <div class="p-3">
             <p>РАЗДЕЛЫ</p>
             <ul>
-              <li>Консультация</li>
-              <li>Преимущества</li>
-              <li>Партнеры</li>
+              <li><Bundle :target="'CONSULTATION'"/></li>
+              <li><Bundle :target="'ADVANTAGES'"/></li>
+              <li><Bundle :target="'MENU_PARTNERS'"/></li>
             </ul>
           </div>
         </div>
 
         <div class="col">
           <div class="p-3">
-            <p>ИНФОРМАЦИЯ</p>
+            <p><Bundle :target="'INFORMATION'"/></p>
             <ul>
-              <li>Контакты</li>
-              <li>Политика конфиденциальности</li>
+              <li><Bundle :target="'CONTACTS'"/></li>
+              <li><Bundle :target="'POLICY'"/></li>
             </ul>
           </div>
         </div>
 
         <div class="col">
           <div class="p-3">
-            <p>ОБРАТНЫЙ ЗВОНОК</p>
+            <p><Bundle :target="'CALLBACK'"/></p>
             <div style="display: flex;">
               <input class="table_cont_inp" type="text" placeholder="Ваш телефон">
               <input class="table_cont_sub align-top pt-2" type="submit" value="">
             </div>
-            <p class="table_cont_smaller font-weight-lighter mt-4 pt-2">Инжиниринговая компания PROJECT ORION</p>
+            <p class="table_cont_smaller font-weight-lighter mt-4 pt-2"><Bundle :target="'TITLE_2'"/></p>
           </div>
         </div>
 
@@ -56,7 +56,10 @@
 
 
 <script>
-export default {}
+
+export default {
+  components: { }
+}
 </script>
 
 

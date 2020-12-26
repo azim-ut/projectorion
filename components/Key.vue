@@ -1,27 +1,21 @@
 <template>
   <div class="keyBlock contentBlock">
     <div class="verticalLeft">
-      <div class="txt">Работаем "под ключ"</div>
+      <div class="txt">
+        <Bundle :target="'KEY_TITLE'" />
+      </div>
     </div>
     <div class="img"></div>
     <div class="verticalCenter">
       <div class="content">
-        <p class="head">Мы осуществляем все работы «под ключ»</p>
-        <ul>
-          <li>Помощь в составлении технического задания</li>
-          <li>Составление проекта</li>
-          <li>По необходимости - согласование с надзорными органами</li>
-          <li>Реализация проекта</li>
-          <li>Составление программы пуско-наладочных работ и их осуществление</li>
-          <li>Сдача проекта надзорным органам (если необъодимо)</li>
-        </ul>
+        <p class="head">
+          <Bundle :target="'KEY_HEAD'" />
+        </p>
         <p>
-          Благодаря уникальным предложениям и принципиальному использованию
-          проверенных технологий, наша команда выполняет даже самые неординарные и трудоемкие задачи, проявляя
-          индивидуальный подход к каждому проекту.
+          <Bundle :target="'KEY_TEXT'" />
         </p>
         <div class="buttonFrame">
-          <button squared class="redButton">Получить консультацию</button>
+          <button squared class="redButton"><Bundle :target="'GET_CONSULTATION'"/></button>
         </div>
       </div>
     </div>
@@ -29,9 +23,12 @@
   </div>
 </template>
 
-export default {
+<script>
 
+export default {
+  components: {}
 }
+</script>
 
 <style>
 .keyBlock {
@@ -75,7 +72,8 @@ export default {
   font-weight: 600;
   line-height: 1.3;
 }
-.keyBlock .content .buttonFrame{
+
+.keyBlock .content .buttonFrame {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -101,7 +99,7 @@ export default {
     width: 100%;
   }
 
-  .keyBlock .content .buttonFrame{
+  .keyBlock .content .buttonFrame {
     text-align: center;
   }
 

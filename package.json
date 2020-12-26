@@ -17,9 +17,10 @@
   "license": "ISC",
   "dependencies": {
     "@nuxtjs/axios": "^5.12.4",
+    "@nuxt/content": "^1.11.1",
     "bootstrap-vue": "^2.20.1",
     "jquery": "^3.5.1",
-    "nuxt": "^2.14.7",
+    "nuxt": "^2.14.12",
     "v-tooltip": "^2.0.3",
     "vue": "^2.6.12",
     "vue-backtotop": "^1.6.1",

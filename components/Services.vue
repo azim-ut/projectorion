@@ -2,76 +2,13 @@
   <div class="ServiceBlock contentBlock">
     <div class="verticalLeft"></div>
     <div class="content">
-      <div class="box">
+      <div v-for="item in items" :key="item.icon" :class="(item.wild?'wild':'serviceBlockBox') + ' box'">
         <div class="iconBlock">
-          <div class="icon"><img src="/img/calc.svg" /></div>
+          <div class="icon"><img :src="item.icon" /></div>
         </div>
         <div class="text">
-          <h3 class="semibold">Проектирование</h3>
-          <p>
-            Определяется архитектура, компоненты и другие аспекты. Создаются
-            сложные
-            системы, опираясь на которые будет проводиться соответствующая деятельность. В зависимости от отрасли,
-            выделяют проектирование: инженерных систем, архитектурно-строительное, ландшафтное, интерьера,
-            градостроительное и т. п.
-          </p>
-        </div>
-      </div>
-      <div class="box">
-        <div class="iconBlock">
-          <div class="icon"><img src="/img/person.svg" /></div>
-        </div>
-        <div class="text">
-          <h3 class="semibold">Производство оборудования</h3>
-          <p>
-            Создается высокоточное техническое оснащение, полностью
-            соответствующее
-            современным требованиям. Возможно проектирование и изготовление техники с интегрированными
-            дополнительными расширениями, что обсуждается в процессе формирования заказа.
-          </p>
-        </div>
-      </div>
-      <div class="box">
-        <div class="iconBlock">
-          <div class="icon"><img src="/img/star.svg" /></div>
-        </div>
-        <div class="text">
-          <h3 class="semibold">Организация процесса получения технических условий и
-            дополнительных
-            мощностей</h3>
-          <p>
-            Внедряется в работу по желанию клиента, представляет собой целый
-            спектр
-            услуг, для реализации которых подключаются сторонние специалисты компании или эксперты из других
-            организаций.
-          </p>
-        </div>
-      </div>
-      <div class="box">
-        <div class="iconBlock">
-          <div class="icon"><img src="/img/todolist.svg" /></div>
-        </div>
-        <div class="text">
-          <h3 class="semibold">Согласование с надзорными оргнами</h3>
-          <p>
-            Подготавливаем бумаги на утверждение строений, архитектурных
-            сооружений
-            любого типа и т.п. Оформляем всё строго по требованиям госорганов, позволяя исключить задержки или
-            появление других трудностей в ходе работы.
-          </p>
-        </div>
-      </div>
-      <div class="box wild">
-        <div class="iconBlock">
-          <div class="icon"><img src="/img/tools.svg" /></div>
-        </div>
-        <div class="text">
-          <h3 class="semibold">Строительно-монтажные (СМР) и пусконаладочные работы (ПНР)</h3>
-          <p>
-            Возводим здания и сооружения, монтируем технологические
-            системы и оборудование, проводим подготовительные работы перед сдачей объекта в эксплуатацию. Следуем
-            регламентам СНиП РФ, регулирующим процесс строительства и осуществления сторонних работ.
-          </p>
+          <h3 class="semibold serviceBlockBoxHead"><Bundle :target="item.title"/></h3>
+          <p class="serviceBlockBoxText"><Bundle :target="item.text"/></p>
         </div>
       </div>
     </div>
@@ -79,8 +16,66 @@
   </div>
 </template>
 
-
-export default {}
+<script>
+export default {
+  components: {},
+  mounted() {
+    this.resizeBlocksHeight()
+    window.addEventListener('resize', this.resizeBlocksHeight)
+  },
+  data: () => ({
+    items: [
+      {
+        icon: '/img/calc.svg',
+        title: 'Проектирование',
+        text: 'Определяется архитектура, компоненты и другие аспекты. Создаются сложные системы, опираясь на которые будет проводиться соответствующая деятельность. В зависимости от отрасли, выделяют проектирование: инженерных систем, архитектурно-строительное, ландшафтное, интерьера, градостроительное и т. п.',
+        wild: false
+      },
+      {
+        icon: '/img/person.svg',
+        title: 'Производство оборудования',
+        text: 'Создается высокоточное техническое оснащение, полностью соответствующее современным требованиям. Возможно проектирование и изготовление техники с интегрированными дополнительными расширениями, что обсуждается в процессе формирования заказа.',
+        wild: false
+      },
+      {
+        icon: '/img/star.svg',
+        title: 'Организация процесса получения технических условий и дополнительных мощностей',
+        text: 'Внедряется в работу по желанию клиента, представляет собой целый спектр услуг, для реализации которых подключаются сторонние специалисты компании или эксперты из других организаций.',
+        wild: false
+      },
+      {
+        icon: '/img/todolist.svg',
+        title: 'Согласование с надзорными органами',
+        text: 'Подготавливаем бумаги на утверждение строений, архитектурных сооружений любого типа и т.п. Оформляем всё строго по требованиям госорганов, позволяя исключить задержки или появление других трудностей в ходе работы.',
+        wild: false
+      },
+      {
+        icon: '/img/tools.svg',
+        title: 'Строительно-монтажные (СМР) и пусконаладочные работы (ПНР)',
+        text: 'Возводим здания и сооружения, монтируем технологические системы и оборудование, проводим подготовительные работы перед сдачей объекта в эксплуатацию. Следуем регламентам СНиП РФ, регулирующим процесс строительства и осуществления сторонних работ.',
+        wild: true
+      }
+    ]
+  }),
+  methods: {
+    resizeBlocksHeight() {
+      let blocks = window.document.querySelectorAll('.serviceBlockBox')
+      let heads = window.document.querySelectorAll('.serviceBlockBoxHead')
+      let texts = window.document.querySelectorAll('.serviceBlockBoxText')
+      let maxHeight = 0
+      blocks.forEach((block, i) => {
+        let height = heads.item(i).clientHeight + texts.item(i).clientHeight
+        if (maxHeight < height) {
+          maxHeight = height
+        }
+      })
+      blocks.forEach(block => {
+        block.style.height = maxHeight + 120 + 'px'
+      })
+    }
+  }
+}
+</script>
 
 
 <style>
@@ -132,39 +127,38 @@ export default {}
   background: #fff;
   display: flex;
   float: left;
-  height: 330px;
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 
-.ServiceBlock .content .box.wild{
-  width: 98%; display: flex;
+.ServiceBlock .content .box.wild {
+  width: 98%;
+  display: flex;
   padding: 2.5%;
 }
 
-.ServiceBlock .content .box.wild{
-  height: 200px;
-}
-
-.ServiceBlock .content .box.wild .icon{
+.ServiceBlock .content .box.wild .icon {
   border: none;
 }
 
 .ServiceBlock .content .box.wild:hover .icon,
-.ServiceBlock .content .box.wild .icon{
+.ServiceBlock .content .box.wild .icon {
   box-shadow: none;
   background: transparent;
 }
-.ServiceBlock .content .box.wild .icon{
-  width: 150px; height: 150px;
+
+.ServiceBlock .content .box.wild .icon {
+  width: 150px;
+  height: 150px;
 }
-.ServiceBlock .content .box.wild .icon img{
+
+.ServiceBlock .content .box.wild .icon img {
   width: 100px;
   height: 100px;
 }
 
-.ServiceBlock .content .box .text{
+.ServiceBlock .content .box .text {
   position: relative;
   z-index: 1;
   transition: 0.5s;
@@ -172,7 +166,7 @@ export default {}
 }
 
 .ServiceBlock .content h3 {
-  margin: 2.5% 0;
+  margin: 0 0 30px;
 }
 
 @media (max-width: 768px) {
@@ -190,19 +184,20 @@ export default {}
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
   }
-  .ServiceBlock .content .box .icon{
+
+  .ServiceBlock .content .box .icon {
     margin: 0 auto;
   }
 
   .ServiceBlock .content .box .iconBlock,
-  .ServiceBlock .content .box .text{
+  .ServiceBlock .content .box .text {
     height: auto;
     width: auto;
     display: block;
     padding: 5%;
   }
 
-  .ServiceBlock .content .box.wild{
+  .ServiceBlock .content .box.wild {
     height: auto;
     width: auto;
     display: block;

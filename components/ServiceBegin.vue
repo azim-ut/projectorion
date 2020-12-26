@@ -5,19 +5,10 @@
     <div class="verticalCenter">
       <div class="content">
         <div class="dotTitle">
-          <img src="/img/point.png" /> УСЛУГИ
+          <img src="/img/point.png" /> <Bundle :target="'MENU_SERVICES'" />
         </div>
-        <p class="head">Компания предоставляет полный спектр услуг,
-          связанных с инжинирингом</p>
-        <p class="service_text1 h5 font-sm-weight-light font-weight-lighter align-baseline p-3">
-          Позволяет заказчику получить все и сразу в одном месте! Мы работаем в отраслях промышленного, гражданского,
-          инфраструктурного, транспортного и ряда других видов строительства; принимаем участие в градостроительстве и
-          эксплуатации сооружений различного назначения.</p>
-        <p class="service_text2 h5 font-sm-weight-light font-weight-lighter p-3"><span class="semibold">Наши услуги
-          распространяются на государственные и коммерческие предприятия,</span> что позволяет проводить работы
-          различного характера, а именно: оказывать профессиональную помощь в комплексном управлении проектов,
-          организовывать и управлять генподрядом/стройкой, осуществлять исследования, проводить управленческое
-          консультирование и многое другое.</p>
+        <p class="head"><Bundle :target="'SERVICES_TITLE'" /></p>
+        <p class="service_text1 h5 font-sm-weight-light font-weight-lighter align-baseline p-3"><Bundle :target="'SERVICES_TEXT'" /></p>
       </div>
     </div>
   </div>

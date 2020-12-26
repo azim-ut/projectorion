@@ -3,7 +3,7 @@
     <div :class="showVideo?'showVideo':'hideVideo'"
          @click="onVideoFinished"
          style="width: 100%; position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 10;">
-      <small class="clickZone">Кликните чтобы пропустить</small>
+      <small class="clickZone"><Bundle :target="'CLICK_TO_SKIP'"/></small>
       <video width="100%" height="100%" autoplay playsinline muted id="myVideo" @ended="onVideoFinished">
         <source src="/video/logo.webm" type="video/webm">
         <source src="/video/logo.mov" type="video/mov">
@@ -12,22 +12,17 @@
       </video>
     </div>
     <div class="verticalLeft">
-      <div class="txt">Инжиниринговая компания</div>
+      <div class="txt"><Bundle :target="'ENG_COMPANY'"/></div>
     </div>
     <div class="verticalCenter mainBannerContent">
       <div class="content" v-if="showContent">
 
-        <p class="h3">Инжиниринговая компания</p>
-        <p class="h1 redText semibold">PROJECT ORION</p>
-        <p class="h3 semibold">Качество имеет значение!</p>
+        <p class="h3"><Bundle :target="'ENG_COMPANY'"/></p>
+        <p class="h1 redText semibold"><Bundle :target="'COMPANY_NAME_EN'" :auth="true"/></p>
+        <p class="h3 semibold"><Bundle :target="'QUALITY_MEANS'"/></p>
         <br />
-        <p class="h4">Реализуем инжиниринговые проекты любой
-          сложности и объемов
-          - от планирования места под размещение объектов до проектирования и сдачи в эксплуатацию.
-        </p>
-        <p class="h4">
-          Открытое, прозрачное сотрудничество, комплексный подход к решению поставленных задач.
-        </p>
+        <p class="h4"><Bundle :target="'MAIN_P1'"/></p>
+        <p class="h4"><Bundle :target="'MAIN_P2'"/></p>
       </div>
     </div>
     <div class="verticalRight">
@@ -37,20 +32,19 @@
   </div>
 </template>
 <script>
-
-
-function myHandler(e) {
-  // What you want to do after the event
-}
-
 export default {
+  components: {},
   mounted() {
+    let viewedVideo = localStorage.getItem('viewedVideo')
+    if (!viewedVideo) {
+      this.showVideo = false
+      this.onVideoFinished()
+    }
     if (this.showVideo) {
       const videoElement = document.getElementById('myVideo')
       const body = document.getElementsByTagName('body')[0]
-      window.console.log(body.classList)
-      if(videoElement){
-        body.classList.add("video");
+      if (videoElement) {
+        body.classList.add('video')
         if (videoElement.playing) {
           // video is already playing so do nothing
         } else {
@@ -70,7 +64,7 @@ export default {
       const body = document.getElementsByTagName('body')[0]
       this.showVideo = false
       this.showContent = true
-      body.classList.remove("video");
+      body.classList.remove('video')
     }
   }
 }
@@ -165,13 +159,6 @@ export default {
 }
 
 .verticalLeft .txt {
-  position: absolute;
-  right: calc(-50%);
-  bottom: calc(+30%);
-  white-space: nowrap;
-  transform: rotate(270deg);
-  letter-spacing: 2px;
-  font-size: .8em;
 }
 
 @media (max-width: 768px) {

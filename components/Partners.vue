@@ -3,13 +3,13 @@
     <div class="verticalLeft">&nbsp;</div>
     <div class="verticalCenter">
       <div class="content">
-        <h1 align="center">Наши партнеры:</h1>
+        <h1 align="center"><Bundle :target="'OUR_PARTNERS'" /></h1>
         <br/>
         <div :class="item.text?'row long':'row'" v-for="item in items" :key="item.logo">
           <a v-if="item.link" :href="item.link" target="_blank">
-            <img :src="item.logo" alt="Наши партнеры" />
+            <img :src="item.logo"/>
           </a>
-          <img v-if="!item.link" :src="item.logo" alt="Наши партнеры" />
+          <img v-if="!item.link" :src="item.logo" />
 
           <p v-if="item.text">
             {{ item.text }}

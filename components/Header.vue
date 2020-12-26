@@ -6,20 +6,20 @@
     </div>
     <div class="verticalCenter">
       <div class="toggle" @click="toggleMenu">
-        <img src="/img/menu.svg" style="height: 2em;"/>
+        <img src="/img/menu.svg" style="height: 2em;" />
       </div>
       <nav v-if="displayMenu == null || displayMenu === true">
         <div id="marker"></div>
         <img src="/img/logo.svg" class='logo' />
         <ul>
-          <li><a href="#about" @click="indicator($event)">О нас</a></li>
-          <li><a href="#opt" @click="indicator($event)">Услуги</a></li>
-          <li><a href="#proj" @click="indicator($event)">Проекты</a></li>
-          <li><a href="#partner" @click="indicator($event)">Партнеры</a></li>
-          <li><a href="#contact" @click="indicator($event)">Контакты</a></li>
+          <li><a href="#about" @click="indicator($event)"><Bundle :target="'MENU_ABOUT'"/></a></li>
+          <li><a href="#opt" @click="indicator($event)"><Bundle :target="'MENU_SERVICES'"/></a></li>
+          <li><a href="#proj" @click="indicator($event)"><Bundle :target="'MENU_PROJECTS'"/></a></li>
+          <li><a href="#partner" @click="indicator($event)"><Bundle :target="'MENU_PARTNERS'"/></a></li>
+          <li><a href="#contact" @click="indicator($event)"><Bundle :target="'MENU_CONTACTS'"/></a></li>
           <li>
             <a href="#cons" style="margin: 0;">
-            <button class="redButton">Связаться с нами</button>
+              <button class="redButton"><Bundle :target="'CONTACT_TO_US'"/></button>
             </a>
           </li>
         </ul>
@@ -33,27 +33,28 @@
 
 <script>
 
-
 export default {
+  components: {},
   mounted: function() {
     window.addEventListener('scroll', this.getWindowWidth)
     this.marker = document.querySelector('#marker')
     this.item = document.querySelector('nav a')
-    if(window.innerWidth < 768){
+    if (window.innerWidth < 768) {
       this.displayMenu = false
     }
   },
   data: () => ({
-    displayMenu:null,
+    displayMenu: null,
     marker: undefined,
-    item: undefined
+    item: undefined,
+    timer: undefined
   }),
   methods: {
-    toggleMenu(){
-      if(this.displayMenu){
-        this.displayMenu = false;
-      }else {
-        this.displayMenu = true;
+    toggleMenu() {
+      if (this.displayMenu) {
+        this.displayMenu = false
+      } else {
+        this.displayMenu = true
       }
     },
     indicator(e) {
@@ -85,13 +86,17 @@ export default {
   transition: .5s;
 }
 
-#HeadMenu nav ul{
-  float: right; padding: 0; margin: 0 0 0 auto;
-  transition: .5s;
+#HeadMenu nav ul {
+  float: right;
+  padding: 0;
+  margin: 0 0 0 auto;
+  transition: 0.5s;
+  text-align: right !important;
 }
 
-#HeadMenu nav ul li{
-  list-style: none; display: inline-block;
+#HeadMenu nav ul li {
+  list-style: none;
+  display: inline-block;
   transition: .5s;
 }
 
@@ -119,22 +124,23 @@ export default {
   margin-top: -20px;
 }
 
-#HeadMenu .toggle{
+#HeadMenu .toggle {
   width: 100%;
   padding: 10px 20px;
-  background: #fff ;
+  background: #fff;
   text-align: right;
   box-sizing: border-box;
   color: #ff0000;
   display: none;
 }
-#HeadMenu .toggle img{
+
+#HeadMenu .toggle img {
   height: 50px;
   color: #ff0000;
 }
 
 @media (max-width: 768px) {
-  #HeadMenu nav{
+  #HeadMenu nav {
     padding: 0;
   }
 
@@ -142,17 +148,19 @@ export default {
     display: none;
   }
 
-  #HeadMenu .toggle{
+  #HeadMenu .toggle {
     display: block;
     background: #fff url("/img/logo_only.jpeg") no-repeat left center/contain;
   }
 
-  #HeadMenu nav ul{
-    width: 100%; background: #fff;
+  #HeadMenu nav ul {
+    width: 100%;
+    background: #fff;
   }
 
-  #HeadMenu nav ul li{
-    display: block; text-align: center;
+  #HeadMenu nav ul li {
+    display: block;
+    text-align: center;
     padding: 20px;
   }
 }

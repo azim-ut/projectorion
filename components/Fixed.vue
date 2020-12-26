@@ -14,26 +14,16 @@
 
         <div ref = "call_form" :class="{'call_fix': isActive}" class="call_form">
             <div class="call_form_inner">
-                <p class="h3-sm h4-xs d-block font-weight-normal">Обратный звонок</p>
-                <input class="d-block mt-4 mb-2" type="text" placeholder="+7(000)000 0000">
-                <button class="d-block">Перезвонить</button>
-                <p class="d-block font-weight-light mt-4 mb-0">Либо позвоните нам по номеру:</p>
-                <p class="d-block font-weight-bold m-0">8 (800) 550-31-93</p>
+                <p class="h3-sm h4-xs d-block font-weight-normal"><Bundle :target="'CALLBACK'"/></p>
+                <input class="d-block mt-4 mb-2" type="text" placeholder="8 (800) 550-31-93">
+                <button class="d-block"><Bundle :target="'CALL_ME_BACK'"/></button>
+                <p class="d-block font-weight-light mt-4 mb-0"><Bundle :target="'OR_CALL'"/></p>
+                <p class="d-block font-weight-bold m-0"><Bundle :target="'PHONE'"/></p>
             </div>
         </div>
 
 
 
-        <div class="nav_points">
-            <a href="#app"><div ref="app_tool_tip" v-b-tooltip.hover.right="'Главная'"></div></a>
-            <a href="#about"><div ref="about_tool_tip" v-b-tooltip.hover.right="'О нас'"></div></a>
-            <a href="#opt"><div ref="service_tool_tip" v-b-tooltip.hover.right="'Услуги'"></div></a>
-            <a href="#cons"><div ref="cons_tool_tip" v-b-tooltip.hover.right="'Консультация'"></div></a>
-            <a href="#proj"><div ref="project_tool_tip" v-b-tooltip.hover.right="'Проекты'"></div></a>
-            <a href="#adv"><div ref="adv_tool_tip" v-b-tooltip.hover.right="'Преимущества'"></div></a>
-            <a href="#partner"><div ref="partner_tool_tip" v-b-tooltip.hover.right="'Партнеры'"></div></a>
-            <a href="#contact"><div ref="contact_tool_tip" v-b-tooltip.hover.right="'Контакты'"></div></a>
-        </div>
     </div>
 </template>
 

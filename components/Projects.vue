@@ -6,19 +6,11 @@
 
       <div class="verticalCenter Project">
         <div class="dotTitle">
-          <img src="/img/point.png" /> ПРОЕКТЫ
+          <img src="/img/point.png" /> <Bundle :target="'MENU_PROJECTS'" />
         </div>
         <div class="content">
-          <h2>
-            Нашей организации доверяет общество и заказчики любого ранга.
-          </h2>
-          <p>
-            Деятельность компании ориентированна на долгосрочное и
-            взаимовыгодное сотрудничество. Наш опыт и постоянный профессиональный прогресс - обеспечивают
-            качество и пунктуальность - которые так ценятся нашими клиентами!
-            <br />
-            Каждый клиент - важен для нас!
-          </p>
+          <h2><Bundle :target="'PROJECTS_TITLE'" /></h2>
+          <p><Bundle :target="'PROJECTS_TEXT'" /></p>
         </div>
       </div>
 

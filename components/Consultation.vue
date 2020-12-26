@@ -1,21 +1,20 @@
 <template>
   <div class="ConsultationBlock contentBlock">
     <div class="verticalLeft">
-      <div class="txt">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</div>
+      <div class="txt" style="text-transform: uppercase"><Bundle :target="'FREE_CONSULTATION'"/></div>
     </div>
     <div class="verticalCenter">
       <div class="content" id="cons">
-        <h3>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</h3>
+        <h3 style="text-transform: uppercase"><Bundle :target="'FREE_CONSULTATION'"/></h3>
         <br />
-        <p>по телефону:<a href="tel:88005503193" style=" color: #fff; font-size: 2.2em;"> 8 (800) 550-31-93</a> или
-          форме обратной связи: </p>
+        <p>по телефону:<a href="tel:88005503193" style=" color: #fff; font-size: 2.2em;"> <Bundle :target="'PHONE'"/></a> <Bundle :target="'OR_FORM'"/> </p>
         <div class="form m-0">
           <input class="cons_input_name mr-2" ref="input_name" type="text" placeholder="Ваше имя" required>
           <input class="cons_input_tel mr-2" ref="input_phone" maxlength=13 type="tel" placeholder="Телефон" required>
           <input class="cons_input_email mr-2" ref="input_mail" type="mail" placeholder="E-mail" required>
-          <button class="cons_but font-weight-normal" @click='submitForm'>Получить консультацию</button>
+          <button class="cons_but font-weight-normal" @click='submitForm'><Bundle :target="'GET_CONSULTATION'"/></button>
         </div>
-        <small>Нажимая на кнопку «Получить консультацию» вы соглашаетесь с <a href="#">политикой конфиденциальности</a></small>
+        <small><Bundle :target="'WILL_CONFIRM_TO'"/><a href="#"><Bundle :target="'TO_POLICY'"/></a></small>
         <div class="form_errors" ref="form_error" :class="{'form_error_active': isActiveForm}">
           <p class="form_x m-0 p-0" @click="closeForm">x</p>
           <div class="px-3 pb-2 m-0">
@@ -31,6 +30,7 @@
 import axios from 'axios'
 
 export default {
+  components: { },
   data() {
     return {
       form: {
@@ -113,6 +113,7 @@ export default {
   background-color: red !important;
   color: white;
   border: 2px solid red;
+  margin-top: 5px;
 }
 
 .cons_but:hover {

@@ -3,11 +3,8 @@
     <div class="verticalLeft"></div>
     <div class="verticalCenter">
       <div class="content">
-        <p class="head">
-          Предприятие «Проект Орион» предоставляет полный цикл инжиниринговых услуг
-        </p>
-        <p>
-          Высококвалифицированные ИТР осуществляют профессиональную деятельность, благодаря которой компания производит работы в установленные сроки и бюджет.</p>
+        <p class="head"><Bundle :target="'ABOUT_PART_HEAD'" /></p>
+        <p><Bundle :target="'ABOUT_PART_TEXT'" /></p>
       </div>
     </div>
     <div class="img"></div>
@@ -15,9 +12,11 @@
 </template>
 
 
+<script>
 export default {
-
+  components: {}
 }
+</script>
 
 <style>
 .AboutPartBlock {
@@ -32,7 +31,7 @@ export default {
   margin-left: 10px;
 }
 
-.AboutPartBlock .verticalCenter{
+.AboutPartBlock .verticalCenter {
   width: 40%;
 }
 

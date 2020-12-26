@@ -35,7 +35,7 @@ body {
     overflow-x: hidden;
 }
 
-body.video .contentBlock{
+body.video .contentBlock {
     display: none;
 }
 
@@ -44,6 +44,11 @@ body.video .contentBlock{
     padding: 0;
     /*font-family: 'VisbyCF', Arial, sans-serif;*/
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+span,
+p, text {
+    white-space: pre-line;
 }
 
 
@@ -59,6 +64,7 @@ body.video .contentBlock{
     font-weight: 600;
 }
 
+.greyButton,
 .redButton {
     color: #040606;
     border: 2px solid #ee2335;
@@ -70,10 +76,21 @@ body.video .contentBlock{
     cursor: pointer;
 }
 
+.greyButton:hover,
 .redButton:hover {
     border: 2px solid #ee2335;
     background: #ee2335;
     color: #fff;
+}
+
+.greyButton{
+    color: #ccc;
+    border: 2px solid #ccc;
+}
+.greyButton:hover{
+    color: #333;
+    border: 2px solid #ccc;
+    background: #ccc;
 }
 
 .divider {
@@ -117,6 +134,11 @@ body.video .contentBlock{
     color: black;
     font-weight: 200;
     bottom: 50%;
+    right: -50% ;
+    white-space: nowrap;
+}
+.verticalLeft .txt span,
+.verticalRight .txt span {
     white-space: nowrap;
 }
 

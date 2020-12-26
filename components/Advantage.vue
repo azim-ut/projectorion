@@ -5,17 +5,16 @@
     <div class="verticalCenter">
       <div class="content">
         <div class="pre">
-          <h1>Почему мы?</h1>
+          <h1>
+            <Bundle :target="'ADVANTAGE_HEAD'" />
+          </h1>
           <p>
-            Мы гордимся и заботимся о своей
-            репутации, потому непрерывно совершенствуем все процессы, проходящие в компании и за ее пределами. Это
-            позволяет
-            создать максимально благоприятную среду для сотрудничества!
+            <Bundle :target="'ADVANTAGE_TEXT'" />
           </p>
         </div>
         <div class="why_we">
           <div class="whyRow" v-for="item in items" :key="item.title">
-            <img :src="item.image" :alt="item.title" />
+            <img :src="item.image" />
             <div class="text">
               <h3>{{ item.title }}</h3>
               <p>{{ item.content }}</p>
@@ -34,7 +33,7 @@
 
 <script>
 export default {
-
+  components: {},
   data() {
     return {
       items: [
@@ -151,8 +150,9 @@ export default {
   .why_we .whyRow img {
     position: relative;
   }
+
   .why_we .whyRow img,
-  .why_we .whyRow .text{
+  .why_we .whyRow .text {
     width: auto;
     height: auto;
     margin: 0%;

@@ -1,27 +1,18 @@
 <template>
   <div class="Partners2Block contentBlock">
     <div class="verticalLeft">
-      <div class="txt">ИНЖИНИРИНГОВАЯ КОМПАНИЯ</div>
+      <div class="txt"><Bundle :target="'ENG_COMPANY'" /></div>
     </div>
     <div class="verticalCenter Partners2">
       <div class="content">
-        <h2 class="semibold">ИНЖИНИРИНГОВАЯ КОМПАНИЯ</h2>
-        <h1 class="semibold redText">PROJECT ORION</h1>
-        <p>
-          Осуществляет инжиниринг: проектирование,
-          строительство, монтаж и ряд других регламентированных услуг, характерных для предприятия полного цикла. В
-          штате работают исключительно высококвалифицированные специалисты, имеющие большой стаж и высшую
-          квалификацию.
-        </p>
-        <p>
-          ПРОЕКТ ОРИОН стремится расширять географию
-          сотрудничества. Наш опыт позволяет эффективно реализовывать проекты в регионах и федеральных центрах.
-        </p>
+        <h2 class="semibold"><Bundle :target="'ENG_COMPANY'" /></h2>
+        <h1 class="semibold redText"><Bundle :target="'COMPANY_NAME_EN'" /></h1>
+        <p><Bundle :target="'PARTNER2_TEXT_1'" /></p>
+        <p><Bundle :target="'PARTNER2_TEXT_2'" /></p>
         <div>
-          <p>Вы можете связаться с нами по
-            <a href="#cons" style="color: red !important;">электронной почте</a> или телефону:</p>
-          <a class="d-sm-inline-block" href="tel:88005503193" style="color: red !important; font-size: 2.2em;">8 (800)
-            550-31-93</a>
+          <p><Bundle :target="'YOU_MAY_CONTACT_BY'" />
+            <a href="#cons" style="color: red !important;"><Bundle :target="'BY_EMAIL'" /></a> <Bundle :target="'OR_BY_PHONE'" />:</p>
+          <a class="d-sm-inline-block" href="tel:88005503193" style="color: red !important; font-size: 2.2em;"><Bundle :target="'PHONE'" /></a>
         </div>
       </div>
     </div>
