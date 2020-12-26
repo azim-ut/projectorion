@@ -35,3 +35,14 @@
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;
 }
+
+
+@media (max-width: 768px) {
+    .modalContainer .modal{
+        left: 5%;
+        right: 5%;
+        transform: translate(0%, -50%);
+        padding: 50px;
+        background: #fff;
+    }
+}

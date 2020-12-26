@@ -1,5 +1,5 @@
 <template>
-  <span class="bundleContent" @click="clickCount()">{{ getText() }}</span>
+  <span class="bundleContent" style="background: transparent" @click="clickCount()">{{ getText() }}</span>
 </template>
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex'

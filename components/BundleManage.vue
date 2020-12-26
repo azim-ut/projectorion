@@ -1,10 +1,10 @@
 <template>
   <div id="BundleManageForm" class="modalContainer" @click="closeEditForm($event)">
     <div class="modal" @click="$event.stopPropagation()">
+      <button class="redButton" style="width: 100%;" @click="submitEditForm">Сохранить</button>
       <textarea v-if="target" v-model="target.text"></textarea>
-      <div style="text-align: center; display: inline-table">
-        <button class="greyButton" @click="closeEditForm">Отмена</button>&nbsp;
-        <button class="redButton" @click="submitEditForm">Сохранить</button>
+      <div style="text-align: center; display: block">
+        <button class="greyButton" style="width: 100%" @click="closeEditForm">Отмена</button>&nbsp;
       </div>
     </div>
   </div>
@@ -63,3 +63,6 @@ export default {
   }
 }
 </script>
+<style>
+
+</style>

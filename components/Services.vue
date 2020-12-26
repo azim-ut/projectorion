@@ -20,8 +20,10 @@
 export default {
   components: {},
   mounted() {
-    this.resizeBlocksHeight()
-    window.addEventListener('resize', this.resizeBlocksHeight)
+    window.setTimeout(this.resizeBlocksHeight, 1000)
+    window.addEventListener('resize', () => {
+      window.setTimeout(this.resizeBlocksHeight, 1000)
+    })
   },
   data: () => ({
     items: [
@@ -177,7 +179,7 @@ export default {
     padding: 5%;
     display: block;
     background: #fff;
-    height: auto;
+    height: auto !important;
     text-align: center;
     float: left;
     position: relative;
