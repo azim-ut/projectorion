@@ -1,0 +1,16 @@
+[
+  {
+    "name": "fun",
+    "path": "/fun",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\fun.vue",
+    "chunkName": "pages/fun",
+    "_name": "_6a8e6549"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3307ba9c"
+  }
+]

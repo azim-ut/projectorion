@@ -1,5 +1,5 @@
 <template>
-  <span class="bundleContent" @mousedown="startCount()" @mouseup="releaseCount()">{{ getText() }}</span>
+  <span class="bundleContent" @click="clickCount()">{{ getText() }}</span>
 </template>
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex'
@@ -15,16 +15,33 @@ export default {
   data() {
     return {
       lang: 'def',
-      text: undefined
+      text: undefined,
+      clickTime: 0,
+      cnt: 0
     }
   },
   mounted() {
     // this.$store.dispatch('translate/fetch')
   },
   methods: {
-    startCount() {
-      window.console.log('start')
-      this.timer = window.setTimeout(this.displayPopup, 1000)
+    clickCount() {
+      let newDate = new Date().getTime()
+      if (this.clickTime === 0) {
+        this.clickTime = newDate
+      } else {
+        if (newDate - this.clickTime < 1000) {
+          this.clickTime = newDate
+          this.cnt++
+        } else {
+          this.cnt = 0
+        }
+      }
+      window.console.log(this.cnt)
+      if (this.cnt > 2) {
+        this.displayPopup()
+        this.clickTime = 0
+        this.cnt = 0
+      }
     },
     releaseCount() {
       window.console.log('release')
