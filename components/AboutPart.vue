@@ -31,9 +31,11 @@ export default {
   margin-left: 10px;
 }
 
+.AboutPartBlock .verticalCenter {
+  display: inline-flex;
+}
 .AboutPartBlock .content {
   width: 45%;
-  display: inline-flex;
   padding: 0 10% 0 0;
 }
 
@@ -60,7 +62,7 @@ export default {
   .AboutPartBlock {
     display: block;
   }
-  .AboutPartBlock .content {
+  .AboutPartBlock .verticalCenter {
     display: block;
   }
 
