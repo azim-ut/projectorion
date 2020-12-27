@@ -40,7 +40,8 @@ export default {
       // this.showVideo = false
       // this.onVideoFinished()
     }
-    if (this.showVideo || true) {
+    this.showVideo = true
+    if (this.showVideo) {
       const videoElement = document.getElementById('myVideo')
       const body = document.getElementsByTagName('body')[0]
       if (videoElement) {
