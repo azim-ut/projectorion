@@ -1,5 +1,5 @@
 <template>
-  <span class="bundleContent" style="background: transparent" @click="clickCount()">{{ getText() }}</span>
+  <span class="bundleContent" :id="id" style="background: transparent" @click="clickCount()">{{ getText() }}</span>
 </template>
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex'
@@ -14,6 +14,7 @@ export default {
   }),
   data() {
     return {
+      id: this.$props.target,
       lang: 'def',
       text: undefined,
       clickTime: 0,
@@ -21,7 +22,14 @@ export default {
     }
   },
   mounted() {
-    window.getSelection()
+    let target = window.document.querySelectorAll("#" + this.id)
+    // this.$store.dispatch('translate/fetch')
+  },
+  beforeMount() {
+    let exists = window.document.querySelectorAll("#" + this.id).length
+    if(exists > 0){
+      this.id += "_" + (exists)
+    }
     // this.$store.dispatch('translate/fetch')
   },
   methods: {

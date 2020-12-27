@@ -113,7 +113,6 @@ export default {
 
 .mainBannerContent {
   background: url("/img/background.jpg") no-repeat fixed;
-  min-height: 100vh;
   overflow: hidden;
   position: relative;
 }
