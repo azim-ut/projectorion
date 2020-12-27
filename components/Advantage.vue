@@ -138,6 +138,10 @@ export default {
     margin: 20px;
   }
 
+  .why_we .whyRow p{
+    text-align: left;
+  }
+
   .why_we .whyRow {
     width: auto;
     display: block;

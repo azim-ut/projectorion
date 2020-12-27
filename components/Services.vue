@@ -172,6 +172,10 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .ServiceBlock .content h3{
+    text-align: center;
+  }
+
   .ServiceBlock .content .box {
     overflow: hidden;
     width: 95%;
@@ -180,7 +184,6 @@ export default {
     display: block;
     background: #fff;
     height: auto !important;
-    text-align: center;
     float: left;
     position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);

@@ -41,7 +41,7 @@ export default {}
 }
 
 .Partners2 h1 {
-  font-size: 3.5em;
+  font-size: 2.3em;
   margin: 20px 0;
 }
 
