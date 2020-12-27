@@ -5,7 +5,7 @@
         <Bundle :target="'KEY_TITLE'" />
       </div>
     </div>
-    <div class="verticalCenter" style="display: inline-flex">
+    <div class="verticalCenter">
       <div class="img"></div>
       <div class="content">
         <p class="head">
@@ -36,6 +36,9 @@ export default {
   width: 100%;
 }
 
+.keyBlock .verticalCenter{
+  display: inline-flex;
+}
 
 .keyBlock .img {
   width: 45%;
@@ -84,6 +87,10 @@ export default {
   .keyBlock .content {
     width: auto;
     margin-left: auto;
+  }
+
+  .keyBlock .verticalCenter{
+    display: block;
   }
 
   .keyBlock .content {

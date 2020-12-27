@@ -37,10 +37,10 @@ export default {
   mounted() {
     let viewedVideo = localStorage.getItem('viewedVideo')
     if (!viewedVideo) {
-      this.showVideo = false
-      this.onVideoFinished()
+      // this.showVideo = false
+      // this.onVideoFinished()
     }
-    if (this.showVideo) {
+    if (this.showVideo || true) {
       const videoElement = document.getElementById('myVideo')
       const body = document.getElementsByTagName('body')[0]
       if (videoElement) {

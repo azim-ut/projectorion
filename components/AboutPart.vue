@@ -1,7 +1,7 @@
 <template>
   <div class="AboutPartBlock contentBlock">
     <div class="verticalLeft"></div>
-    <div class="verticalCenter" style="display: inline-flex">
+    <div class="verticalCenter">
       <div class="content">
         <p class="head"><Bundle :target="'ABOUT_PART_HEAD'" /></p>
         <p><Bundle :target="'ABOUT_PART_TEXT'" /></p>
@@ -33,6 +33,7 @@ export default {
 
 .AboutPartBlock .content {
   width: 45%;
+  display: inline-flex;
   padding: 0 10% 0 0;
 }
 
@@ -57,6 +58,9 @@ export default {
 
 @media (max-width: 768px) {
   .AboutPartBlock {
+    display: block;
+  }
+  .AboutPartBlock .content {
     display: block;
   }
 
