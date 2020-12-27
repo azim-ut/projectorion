@@ -2,7 +2,7 @@
   <div>
     <BundleManage />
     <Header />
-    <Main />
+    <Main content="true"/>
     <About />
     <div class="divider contentBlock">&nbsp;</div>
     <Key />

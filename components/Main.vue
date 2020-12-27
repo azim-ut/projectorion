@@ -11,21 +11,24 @@
         Your browser does not support the video tag.
       </video>
     </div>
-    <div class="verticalLeft">
-      <div class="txt"><Bundle :target="'ENG_COMPANY'"/></div>
-    </div>
-    <div class="verticalCenter mainBannerContent">
-      <div class="content" v-if="showContent">
-
-        <p class="h3"><Bundle :target="'ENG_COMPANY'"/></p>
-        <p class="h1 redText semibold"><Bundle :target="'COMPANY_NAME_EN'" :auth="true"/></p>
-        <p class="h3 semibold"><Bundle :target="'QUALITY_MEANS'"/></p>
-        <br />
-        <p class="h4"><Bundle :target="'MAIN_P1'"/></p>
-        <p class="h4"><Bundle :target="'MAIN_P2'"/></p>
+    <div class="verticalCenter mainBannerContent" style="width: 100%;">
+      <div :class="$props.content?'content':'content short'" v-if="showContent">
+        <a href="/" class="fullLogoLink">
+          <div class="fullLogo">
+            PROJECT ORION
+            <br/>
+            <div class="sub">
+              <Bundle :target="'QUALITY_MEANS'"/>
+            </div>
+          </div>
+        </a>
+        <div class="mainContent" v-if="$props.content">
+          <p class="h3"><Bundle :target="'ENG_COMPANY'"/></p>
+          <br/>
+          <p class="h4"><Bundle :target="'MAIN_P1'"/></p>
+          <p class="h4"><Bundle :target="'MAIN_P2'"/></p>
+        </div>
       </div>
-    </div>
-    <div class="verticalRight">
       &nbsp;
       <img class="many_points" src="/img/points.svg" alt="Many points image" />
     </div>
@@ -33,6 +36,7 @@
 </template>
 <script>
 export default {
+  props: { content: true },
   components: {},
   mounted() {
     let viewedVideo = localStorage.getItem('viewedVideo')
@@ -118,6 +122,32 @@ export default {
   position: relative;
 }
 
+.mainBannerContent .fullLogoLink {
+  color: #fff !important;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.mainBannerContent .fullLogo {
+  background: url("/img/logo_watermark.png") no-repeat center 20px/contain;
+  position: relative;
+  text-align: center;
+  width: 260px;
+  font-size: 190%;
+  padding-top: 90px;
+  color: #fff !important;
+  text-decoration: none;
+
+}
+
+.mainBannerContent .fullLogo .sub{
+  font-size: 50%;
+  text-align: right;
+  font-style: italic;
+  margin: 2px 7px;
+}
+
 .many_points {
   position: absolute;
   right: 0px;
@@ -126,12 +156,16 @@ export default {
 }
 
 .mainBannerContent .content {
-  margin: 100px;
+  margin: 0 40px 40px;
   overflow: hidden;
   bottom: 100px;
-  background: rgba(0, 0, 0, .5);
   color: #f1f1f1;
-  padding: 40px;
+  padding-bottom: 40px;
+  height: 450px;
+}
+
+.mainBannerContent .content.short {
+  height: 100px !important;
 }
 
 .mainBannerContent p {
@@ -161,6 +195,13 @@ export default {
 .verticalLeft .txt {
 }
 
+
+.mainContent{
+  margin: auto;
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+}
 @media (max-width: 768px) {
   .mainBanner .verticalRight,
   .mainBanner .verticalLeft {
@@ -169,11 +210,13 @@ export default {
 
   .mainBannerContent {
     background: url("/img/background.jpg") no-repeat center center;
-    min-height: auto;
+    min-height: 100vh;
   }
 
   .mainBannerContent .content {
-    margin: 50px 20px;
+    margin: 0 20px 50px;
+    padding: 0;
+    background: transparent;
   }
 
   .mainBannerContent p {
@@ -182,7 +225,7 @@ export default {
   }
 
   .mainBannerContent .h1 {
-    font-size: 2.5em;
+    font-size: 160%;
   }
 
   .mainBannerContent .h3 {

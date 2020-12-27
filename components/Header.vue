@@ -10,10 +10,9 @@
       </div>
       <nav v-if="displayMenu == null || displayMenu === true">
         <div id="marker"></div>
-        <a href="/"><img src="/img/logo.svg" class='logo' /></a>
         <ul>
           <li><a href="#about" @click="indicator($event)"><Bundle :target="'MENU_ABOUT'"/></a></li>
-          <li><a href="#opt" @click="indicator($event)"><Bundle :target="'MENU_SERVICES'"/></a></li>
+          <li><a href="/world" @click="indicator($event)"><Bundle :target="'MENU_SERVICES'"/></a></li>
           <li><a href="#proj" @click="indicator($event)"><Bundle :target="'MENU_PROJECTS'"/></a></li>
           <li><a href="#partner" @click="indicator($event)"><Bundle :target="'MENU_PARTNERS'"/></a></li>
           <li><a href="#contact" @click="indicator($event)"><Bundle :target="'MENU_CONTACTS'"/></a></li>
@@ -76,6 +75,9 @@ export default {
   align-items: flex-end;
   overflow: hidden;
   transition: .5s;
+  background: transparent;
+  position: absolute;
+  z-index: 10;
 }
 
 #HeadMenu nav {
@@ -91,6 +93,7 @@ export default {
   padding: 0;
   margin: 0 0 0 auto;
   transition: 0.5s;
+  color: #fff;
   text-align: right !important;
 }
 
@@ -98,6 +101,7 @@ export default {
   list-style: none;
   display: inline-block;
   transition: .5s;
+  color: #fff;
 }
 
 #HeadMenu nav a {
@@ -140,9 +144,26 @@ export default {
   color: #ff0000;
 }
 
+#HeadMenu nav .redButton,
+#HeadMenu nav a{
+  color: #fff;
+}
+
 @media (max-width: 768px) {
+  #HeadMenu{
+    background: transparent;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .logoHref{
+    display: none;
+  }
   #HeadMenu nav {
     padding: 0;
+    background: rgba(0,0,0,1);
+    margin-top: 100px;
+    min-height: 80vh;
   }
 
   #HeadMenu nav .logo {
@@ -151,12 +172,12 @@ export default {
 
   #HeadMenu .toggle {
     display: block;
-    background: #fff url("/img/logo_only.jpeg") no-repeat left center/contain;
+    background: transparent;
   }
 
   #HeadMenu nav ul {
     width: 100%;
-    background: #fff;
+    color: #fff
   }
 
   #HeadMenu nav ul li {

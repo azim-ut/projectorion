@@ -2,6 +2,7 @@
   <div>
     <BundleManage />
     <Header />
+    <Main :content="false"/>
     <div class="divider contentBlock">&nbsp;</div>
     <Nuxt />
     <div class="divider contentBlock">&nbsp;</div>
