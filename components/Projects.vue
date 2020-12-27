@@ -38,10 +38,8 @@
             <div class="box">
               <div class="text">
                 <img :src="item.image" />
-                <h3>{{ item.title }}</h3>
-                <p>
-                  {{ item.content }}
-                </p>
+                <h3><Bundle :target="item.title" /></h3>
+                <p><Bundle :target="item.content" /></p>
               </div>
             </div>
           </template>
@@ -66,30 +64,30 @@ export default {
     return {
       items: [
         {
-          title: 'ООО «Армада»',
-          content: 'Работы по монтажу и пуско-наладке систем внешнего энергоснабжения 10/0,4 кВ (г.Каспийск).',
+          title: 'PROJECTS_TITLE_1',
+          content: 'PROJECTS_TEXT_1',
           image: '/img/monopoly_sm.jpg'
         },
         {
-          title: 'ООО «Титан Полимер»',
-          content: 'Работы по монтажу систем 10/0,4 кВ, монтаж кабельных систем и лоточных трасс, монтаж освещения, монтаж слаботочных систем (г.Псков).',
+          title: 'PROJECTS_TITLE_2',
+          content: 'PROJECTS_TEXT_2',
           image: '/img/monopoly_sm.jpg'
         },
         {
-          title: 'ГК Росстройинвест (РСТИ)',
-          content: 'Монтаж систем внутреннего электроснабжения.',
+          title: 'PROJECTS_TITLE_3',
+          content: 'PROJECTS_TEXT_3',
           image: '/img/monopoly_sm.jpg'
         },
         {
-          title: 'Министерство Обороны РФ',
-          content: 'Монтаж систем внешнего энергоснабжения 10/0,4 кВ.',
+          title: 'PROJECTS_TITLE_4',
+          content: 'PROJECTS_TEXT_4',
           image: '/img/monopoly_sm.jpg'
         }
       ],
       options: {
         responsive: [
           { end: 600, size: 1 },
-          { size: 3 }
+          { size: 2 }
         ],
         navigation: {
           backgroundColor: 'red',

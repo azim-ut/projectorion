@@ -21,6 +21,7 @@ export default {
     }
   },
   mounted() {
+    window.getSelection()
     // this.$store.dispatch('translate/fetch')
   },
   methods: {
@@ -84,3 +85,7 @@ export default {
   }
 }
 </script>
+
+<style>
+
+</style>

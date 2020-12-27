@@ -12,7 +12,7 @@
           <img v-if="!item.link" :src="item.logo" />
 
           <p v-if="item.text">
-            {{ item.text }}
+            <Bundle :target="item.text" />
           </p>
         </div>
       </div>
@@ -29,7 +29,7 @@ export default {
     return {
       items: [
         {
-          text: 'ООО «АС-Строй» (г.Краснодар) - крупнейший производитель силового оборудования на юге РФ. Наша компания имеет инвестиционно-партнерское соглашение с компанией АС-Строй на эксклюзивное представление и взаимодействие на территории северо-западного региона России.',
+          text: 'AC_STROY',
           link: 'http://www.as-energo.ru',
           logo: '/img/ac_logo_100.jpg'
         },
