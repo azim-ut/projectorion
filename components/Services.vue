@@ -2,15 +2,21 @@
   <div class="ServiceBlock contentBlock">
     <div class="verticalLeft"></div>
     <div class="content">
-      <div v-for="item in items" :key="item.icon" :class="(item.wild?'wild':'serviceBlockBox') + ' box'">
-        <div class="iconBlock">
-          <div class="icon"><img :src="item.icon" /></div>
+      <a href="/world" v-for="item in items" :key="item.icon">
+        <div :class="(item.wild?'wild':'serviceBlockBox') + ' box'">
+          <div class="iconBlock">
+            <div class="icon"><img :src="item.icon" /></div>
+          </div>
+          <div class="text">
+            <h3 class="semibold serviceBlockBoxHead">
+              <Bundle :target="item.title" />
+            </h3>
+            <p class="serviceBlockBoxText">
+              <Bundle :target="item.text" />
+            </p>
+          </div>
         </div>
-        <div class="text">
-          <h3 class="semibold serviceBlockBoxHead"><Bundle :target="item.title"/></h3>
-          <p class="serviceBlockBoxText"><Bundle :target="item.text"/></p>
-        </div>
-      </div>
+      </a>
     </div>
     <div class="verticalLeft"></div>
   </div>
@@ -172,7 +178,7 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .ServiceBlock .content h3{
+  .ServiceBlock .content h3 {
     text-align: center;
   }
 

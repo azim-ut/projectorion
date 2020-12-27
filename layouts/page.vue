@@ -3,7 +3,8 @@
     <BundleManage />
     <Header />
     <div class="divider contentBlock">&nbsp;</div>
-    <ServiceBegin />
+    <Nuxt />
+    <div class="divider contentBlock">&nbsp;</div>
     <Consultation />
     <Contacts />
 
