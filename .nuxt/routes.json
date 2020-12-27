@@ -1,10 +1,38 @@
 [
   {
-    "name": "fun",
-    "path": "/fun",
-    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\fun.vue",
-    "chunkName": "pages/fun",
-    "_name": "_6a8e6549"
+    "name": "about",
+    "path": "/about",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\about.vue",
+    "chunkName": "pages/about",
+    "_name": "_134fdfd7"
+  },
+  {
+    "name": "partners",
+    "path": "/partners",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\partners.vue",
+    "chunkName": "pages/partners",
+    "_name": "_6a564451"
+  },
+  {
+    "name": "projects",
+    "path": "/projects",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\projects.vue",
+    "chunkName": "pages/projects",
+    "_name": "_ce9fbec0"
+  },
+  {
+    "name": "test",
+    "path": "/test",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\test.vue",
+    "chunkName": "pages/test",
+    "_name": "_536cf7b8"
+  },
+  {
+    "name": "world",
+    "path": "/world",
+    "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\world.vue",
+    "chunkName": "pages/world",
+    "_name": "_b3d36548"
   },
   {
     "name": "index",

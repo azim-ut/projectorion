@@ -12,9 +12,9 @@ import '..\\assets\\css\\manage.css'
 import '..\\node_modules\\prismjs\\themes\\prism.css'
 
 import _6f6c098b from '..\\layouts\\default.vue'
-import _2d29e588 from '..\\layouts\\test.vue'
+import _2d280385 from '..\\layouts\\page.vue'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b),"_test": sanitizeComponent(_2d29e588) }
+const layouts = { "_default": sanitizeComponent(_6f6c098b),"_page": sanitizeComponent(_2d280385) }
 
 export default {
   render (h, props) {

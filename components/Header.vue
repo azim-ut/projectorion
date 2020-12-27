@@ -10,7 +10,7 @@
       </div>
       <nav v-if="displayMenu == null || displayMenu === true">
         <div id="marker"></div>
-        <img src="/img/logo.svg" class='logo' />
+        <a href="/"><img src="/img/logo.svg" class='logo' /></a>
         <ul>
           <li><a href="#about" @click="indicator($event)"><Bundle :target="'MENU_ABOUT'"/></a></li>
           <li><a href="#opt" @click="indicator($event)"><Bundle :target="'MENU_SERVICES'"/></a></li>
@@ -113,6 +113,7 @@ export default {
 }
 
 #HeadMenu nav #marker {
+  display: none;
   position: absolute;
   left: 0;
   height: 4px;

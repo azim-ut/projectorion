@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Just for fun</h1>
+        <h1>Just for test</h1>
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    layout: 'test'
+    layout: 'page'
 }
 </script>
 
