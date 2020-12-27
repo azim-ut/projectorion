@@ -5,8 +5,8 @@
         <Bundle :target="'KEY_TITLE'" />
       </div>
     </div>
-    <div class="img"></div>
-    <div class="verticalCenter">
+    <div class="verticalCenter" style="display: inline-flex">
+      <div class="img"></div>
       <div class="content">
         <p class="head">
           <Bundle :target="'KEY_HEAD'" />
@@ -36,21 +36,16 @@ export default {
   width: 100%;
 }
 
-.keyBlock .verticalCenter {
-  width: 60%;
-}
-
 
 .keyBlock .img {
-  width: 40%;
+  width: 45%;
   min-height: 300px;
   background: transparent url("/img/worker.jpg") no-repeat center center/cover;
-  margin-left: 10px;
 }
 
 .keyBlock .content {
-  width: 90%;
-  padding: 0 10% 0 0;
+  width: 45%;
+  padding: 0 0% 0 0;
   margin-left: 10%;
 }
 

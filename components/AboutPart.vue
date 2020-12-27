@@ -1,13 +1,13 @@
 <template>
   <div class="AboutPartBlock contentBlock">
     <div class="verticalLeft"></div>
-    <div class="verticalCenter">
+    <div class="verticalCenter" style="display: inline-flex">
       <div class="content">
         <p class="head"><Bundle :target="'ABOUT_PART_HEAD'" /></p>
         <p><Bundle :target="'ABOUT_PART_TEXT'" /></p>
       </div>
+      <div class="img"></div>
     </div>
-    <div class="img"></div>
   </div>
 </template>
 
@@ -25,19 +25,15 @@ export default {
 }
 
 .AboutPartBlock .img {
-  width: 40%;
+  width: 45%;
   min-height: 300px;
   background: transparent url("/img/dd1.jpg") no-repeat center center/cover;
   margin-left: 10px;
 }
 
-.AboutPartBlock .verticalCenter {
-  width: 40%;
-}
-
 .AboutPartBlock .content {
-  width: auto;
-  padding: 0 5% 0 0;
+  width: 45%;
+  padding: 0 10% 0 0;
 }
 
 .AboutPartBlock .content p {
