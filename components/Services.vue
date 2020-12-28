@@ -30,6 +30,7 @@ export default {
     window.addEventListener('resize', () => {
       window.setTimeout(this.resizeBlocksHeight, 1000)
     })
+    this.$nuxt.$on('resized', this.resizeBlocksHeight)
   },
   data: () => ({
     items: [

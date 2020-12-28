@@ -67,6 +67,7 @@ export default {
       this.showVideo = false
       this.showContent = true
       body.classList.remove('video')
+      this.$nuxt.$emit('resized')
     }
   }
 }
