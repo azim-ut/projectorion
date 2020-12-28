@@ -8,21 +8,44 @@
       <div class="toggle" @click="toggleMenu">
         <img src="/img/menu.svg" style="height: 2em;" />
       </div>
-      <nav v-if="displayMenu == null || displayMenu === true">
-        <div id="marker"></div>
-        <ul>
-          <li><a href="#about" @click="indicator($event)"><Bundle :target="'MENU_ABOUT'"/></a></li>
-          <li><a href="/world" @click="indicator($event)"><Bundle :target="'MENU_SERVICES'"/></a></li>
-          <li><a href="#proj" @click="indicator($event)"><Bundle :target="'MENU_PROJECTS'"/></a></li>
-          <li><a href="#partner" @click="indicator($event)"><Bundle :target="'MENU_PARTNERS'"/></a></li>
-          <li><a href="#contact" @click="indicator($event)"><Bundle :target="'MENU_CONTACTS'"/></a></li>
-          <li>
-            <a href="#cons" style="margin: 0;">
-              <button class="redButton"><Bundle :target="'CONTACT_TO_US'"/></button>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <div class="logoAndMenuPair">
+        <a href="/" class="fullLogoLink">
+          <div class="fullLogo">
+            PROJECT ORION
+            <br />
+            <div class="sub">
+              <Bundle :target="'QUALITY_MEANS'" />
+            </div>
+          </div>
+        </a>
+        <nav v-if="displayMenu == null || displayMenu === true">
+          <div id="marker"></div>
+          <ul>
+            <li><a href="#about" @click="indicator($event)">
+              <Bundle :target="'MENU_ABOUT'" />
+            </a></li>
+            <li><a href="/world" @click="indicator($event)">
+              <Bundle :target="'MENU_SERVICES'" />
+            </a></li>
+            <li><a href="#proj" @click="indicator($event)">
+              <Bundle :target="'MENU_PROJECTS'" />
+            </a></li>
+            <li><a href="#partner" @click="indicator($event)">
+              <Bundle :target="'MENU_PARTNERS'" />
+            </a></li>
+            <li><a href="#contact" @click="indicator($event)">
+              <Bundle :target="'MENU_CONTACTS'" />
+            </a></li>
+            <li>
+              <a href="#cons" style="margin: 0;">
+                <button class="redButton">
+                  <Bundle :target="'CONTACT_TO_US'" />
+                </button>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <div class="verticalRight">
       &nbsp;
@@ -82,10 +105,10 @@ export default {
 
 #HeadMenu nav {
   position: relative;
-  display: flex;
-  width: 100%;
+  width: auto;
   padding: 40px 0;
   transition: .5s;
+  margin: 0 0 0 auto;
 }
 
 #HeadMenu nav ul {
@@ -145,29 +168,56 @@ export default {
 }
 
 #HeadMenu nav .redButton,
-#HeadMenu nav a{
+#HeadMenu nav a {
   color: #fff;
 }
 
+#HeadMenu .fullLogoLink {
+  color: #fff !important;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#HeadMenu .fullLogo {
+  background: url("/img/logo_watermark.png") no-repeat center 20px/contain;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  font-size: 190%;
+  padding-top: 90px;
+  color: #fff !important;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+
+#HeadMenu .fullLogo .sub {
+  font-size: 50%;
+  text-align: right;
+  font-style: italic;
+  margin: 2px 7px;
+}
+.logoAndMenuPair{
+  display: flex;
+}
 @media (max-width: 768px) {
-  #HeadMenu{
+  .logoAndMenuPair{
+    display: block;
+  }
+  #HeadMenu {
     background: transparent;
     position: absolute;
     z-index: 10;
   }
 
-  .logoHref{
-    display: none;
-  }
-  #HeadMenu nav {
-    padding: 0;
-    background: rgba(0,0,0,1);
-    margin-top: 100px;
-    min-height: 80vh;
+  #HeadMenu .fullLogo{
+    width: 300px;
   }
 
-  #HeadMenu nav .logo {
-    display: none;
+  #HeadMenu nav {
+    padding: 0;
+    background: rgba(0, 0, 0, 1);
+    min-height: 70vh;
   }
 
   #HeadMenu .toggle {

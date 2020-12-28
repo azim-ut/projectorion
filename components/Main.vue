@@ -11,17 +11,11 @@
         Your browser does not support the video tag.
       </video>
     </div>
+    <div class="verticalLeft">
+      &nbsp;
+    </div>
     <div class="verticalCenter mainBannerContent" style="width: 100%;">
       <div :class="$props.content?'content':'content short'" v-if="showContent">
-        <a href="/" class="fullLogoLink">
-          <div class="fullLogo">
-            PROJECT ORION
-            <br/>
-            <div class="sub">
-              <Bundle :target="'QUALITY_MEANS'"/>
-            </div>
-          </div>
-        </a>
         <div class="mainContent" v-if="$props.content">
           <p class="h3"><Bundle :target="'ENG_COMPANY'"/></p>
           <br/>
@@ -31,6 +25,9 @@
       </div>
       &nbsp;
       <img class="many_points" src="/img/points.svg" alt="Many points image" />
+    </div>
+    <div class="verticalRight">
+      &nbsp;
     </div>
   </div>
 </template>
@@ -79,6 +76,7 @@ export default {
 .mainBanner {
   width: 100%;
   display: flex;
+  background: url("/img/background.jpg") no-repeat center center;
 }
 
 #myVideo {
@@ -117,35 +115,8 @@ export default {
 }
 
 .mainBannerContent {
-  background: url("/img/background.jpg") no-repeat fixed;
   overflow: hidden;
   position: relative;
-}
-
-.mainBannerContent .fullLogoLink {
-  color: #fff !important;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.mainBannerContent .fullLogo {
-  background: url("/img/logo_watermark.png") no-repeat center 20px/contain;
-  position: relative;
-  text-align: center;
-  width: 260px;
-  font-size: 190%;
-  padding-top: 90px;
-  color: #fff !important;
-  text-decoration: none;
-
-}
-
-.mainBannerContent .fullLogo .sub{
-  font-size: 50%;
-  text-align: right;
-  font-style: italic;
-  margin: 2px 7px;
 }
 
 .many_points {
@@ -158,10 +129,11 @@ export default {
 .mainBannerContent .content {
   margin: 0 40px 40px;
   overflow: hidden;
-  bottom: 100px;
+  bottom: 20px;
   color: #f1f1f1;
   padding-bottom: 40px;
   height: 450px;
+  position: relative;
 }
 
 .mainBannerContent .content.short {
@@ -169,9 +141,7 @@ export default {
 }
 
 .mainBannerContent p {
-  width: 60%;
   color: #fff;
-  margin: 10px 0;
 }
 
 .mainBannerContent .h2 {
@@ -199,24 +169,31 @@ export default {
 .mainContent{
   margin: auto;
   position: absolute;
-  bottom: 70px;
-  width: 100%;
+  bottom: 0px;
+  width: auto;
+  right: 10px;
 }
 @media (max-width: 768px) {
+  .mainBanner{
+    background: url("/img/background.jpg") no-repeat center center;
+  }
   .mainBanner .verticalRight,
   .mainBanner .verticalLeft {
     display: none;
   }
 
   .mainBannerContent {
-    background: url("/img/background.jpg") no-repeat center center;
     min-height: 100vh;
   }
 
   .mainBannerContent .content {
-    margin: 0 20px 50px;
+    margin: auto 20px 50px;
     padding: 0;
+    position: absolute;
     background: transparent;
+    bottom: 10px;
+    right: 10px;
+    width: 100%;
   }
 
   .mainBannerContent p {
