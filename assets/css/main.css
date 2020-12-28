@@ -153,7 +153,7 @@ p, text {
 .ServiceBeginBlock .img {
     position: absolute;
     width: 50%;
-    height: 30%;
+    height: 150px;
     right: -20%;
     top: 5%;
     background: transparent url("/img/g10.svg") no-repeat 0 0/cover;
