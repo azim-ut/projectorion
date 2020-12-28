@@ -1,5 +1,5 @@
 <template>
-  <span :class="showModifyButton?'bundleContent':'bundleContent modify'" :id="id" style="background: transparent" @click="clickCount()">{{ getText() }}</span>
+  <span class="bundleContent" :id="id" style="background: transparent" @click="toggleEditMode()">{{ getText() }}<div  @click="displayPopup()" class="modify" v-if="showModifyButton">Edit</div></span>
 </template>
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex'
@@ -14,7 +14,7 @@ export default {
   }),
   data() {
     return {
-      showModifyButton: true,
+      showModifyButton: false,
       id: this.$props.target,
       lang: 'def',
       text: undefined,
@@ -24,6 +24,7 @@ export default {
   },
   mounted() {
     let target = window.document.querySelectorAll("#" + this.id)
+
     // this.$store.dispatch('translate/fetch')
   },
   beforeMount() {
@@ -34,24 +35,8 @@ export default {
     // this.$store.dispatch('translate/fetch')
   },
   methods: {
-    clickCount() {
-      let newDate = new Date().getTime()
-      if (this.clickTime === 0) {
-        this.clickTime = newDate
-      } else {
-        if (newDate - this.clickTime < 1000) {
-          this.clickTime = newDate
-          this.cnt++
-        } else {
-          this.cnt = 0
-        }
-      }
-      window.console.log(this.cnt)
-      if (this.cnt > 2) {
-        this.displayPopup()
-        this.clickTime = 0
-        this.cnt = 0
-      }
+    toggleEditMode() {
+      this.showModifyButton = !this.showModifyButton
     },
     releaseCount() {
       window.console.log('release')
@@ -96,7 +81,25 @@ export default {
 </script>
 
 <style>
-.bundleContent.modify :after{
-  content: "Edit";
+.bundleContent{
+  position: relative;
+}
+.bundleContent .modify{
+  background: #ccc;
+  padding: 5px 8px;
+  border-radius: 15px 15px 15px 0;
+  font-size: xx-small;
+  position: absolute;
+  top: -20px;
+  color: #000;
+  left: 5px;
+  letter-spacing: normal;
+  text-transform: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+.bundleContent .modify:hover{
+  background: #333;
+  color: #fff;
 }
 </style>
