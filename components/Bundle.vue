@@ -1,5 +1,5 @@
 <template>
-  <span class="bundleContent" :id="id" style="background: transparent" @click="clickCount()">{{ getText() }}</span>
+  <span :class="showModifyButton?'bundleContent':'bundleContent modify'" :id="id" style="background: transparent" @click="clickCount()">{{ getText() }}</span>
 </template>
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex'
@@ -14,6 +14,7 @@ export default {
   }),
   data() {
     return {
+      showModifyButton: true,
       id: this.$props.target,
       lang: 'def',
       text: undefined,
@@ -95,5 +96,7 @@ export default {
 </script>
 
 <style>
-
+.bundleContent.modify :after{
+  content: "Edit";
+}
 </style>

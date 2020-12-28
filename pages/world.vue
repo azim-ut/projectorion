@@ -10,6 +10,7 @@
           </div>
           <br/>
           <Bundle :target="'WORLD_CONTENT'"/>
+          <br/>
         </div>
       </div>
     </div>
