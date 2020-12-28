@@ -29,7 +29,9 @@ export default {
   components: {},
   props: { target: undefined },
   async fetch() {
-    await this.$store.dispatch('translate/fetch')
+    await this.$store.dispatch('translate/fetch').then(() => {
+      this.$nuxt.$emit('resized')
+    })
   },
   methods: {
     ...mapActions({

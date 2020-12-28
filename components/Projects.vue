@@ -6,11 +6,16 @@
 
       <div class="verticalCenter Project">
         <div class="dotTitle">
-          <img src="/img/point.png" /> <Bundle :target="'MENU_PROJECTS'" />
+          <img src="/img/point.png" />
+          <Bundle :target="'MENU_PROJECTS'" />
         </div>
         <div class="content">
-          <h2><Bundle :target="'PROJECTS_TITLE'" /></h2>
-          <p><Bundle :target="'PROJECTS_TEXT'" /></p>
+          <h2>
+            <Bundle :target="'PROJECTS_TITLE'" />
+          </h2>
+          <p>
+            <Bundle :target="'PROJECTS_TEXT'" />
+          </p>
         </div>
       </div>
 
@@ -19,7 +24,6 @@
     <div class="SliderBlock">
       <div class="verticalLeft">&nbsp;</div>
       <div class="slider">
-
         <vue-horizontal-list :items="items" :options="options">
 
           <template v-slot:nav-prev>
@@ -38,13 +42,16 @@
             <div class="box">
               <div class="text">
                 <img :src="item.image" />
-                <h3><Bundle :target="item.title" /></h3>
-                <p><Bundle :target="item.content" /></p>
+                <h3>
+                  <Bundle :target="item.title" />
+                </h3>
+                <p>
+                  <Bundle :target="item.content" />
+                </p>
               </div>
             </div>
           </template>
         </vue-horizontal-list>
-
       </div>
       <div class="verticalLeft">&nbsp;</div>
     </div>
@@ -60,8 +67,19 @@ export default {
   components: {
     VueHorizontalList
   },
+  mounted() {
+
+    window.addEventListener('resize', this.onResize)
+    this.$nuxt.$on('resized', () => {
+      window.setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+      }, 500)
+      this.resized = true
+    })
+  },
   data() {
     return {
+      resized: false,
       items: [
         {
           title: 'PROJECTS_TITLE_1',
@@ -86,8 +104,9 @@ export default {
       ],
       options: {
         responsive: [
-          { end: 600, size: 1 },
-          { size: 2 }
+          { end: 576, size: 1 },
+          { start: 576, end: 768, size: 2 },
+          { size: 3 }
         ],
         navigation: {
           backgroundColor: 'red',
@@ -99,7 +118,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+
+.vhl-item{
+  /*width: 50% !important;*/
+}
 .projectBlock {
   display: flex;
   width: 100%;
