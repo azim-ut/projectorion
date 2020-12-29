@@ -3,42 +3,36 @@
     "name": "about",
     "path": "/about",
     "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\about.vue",
-    "chunkName": "pages/about",
-    "_name": "_134fdfd7"
+    "chunkName": "pages/about"
   },
   {
     "name": "partners",
     "path": "/partners",
     "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\partners.vue",
-    "chunkName": "pages/partners",
-    "_name": "_6a564451"
+    "chunkName": "pages/partners"
   },
   {
     "name": "projects",
     "path": "/projects",
     "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\projects.vue",
-    "chunkName": "pages/projects",
-    "_name": "_ce9fbec0"
+    "chunkName": "pages/projects"
   },
   {
     "name": "test",
     "path": "/test",
     "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\test.vue",
-    "chunkName": "pages/test",
-    "_name": "_536cf7b8"
+    "chunkName": "pages/test"
   },
   {
     "name": "world",
     "path": "/world",
     "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\world.vue",
-    "chunkName": "pages/world",
-    "_name": "_b3d36548"
+    "chunkName": "pages/world"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Server\\\\OpenServer\\\\domains\\\\projectorion\\\\web\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_3307ba9c"
+    "chunkName": "pages/index"
   }
 ]

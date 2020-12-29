@@ -83,11 +83,12 @@ p, text {
     color: #fff;
 }
 
-.greyButton{
+.greyButton {
     color: #ccc;
     border: 2px solid #ccc;
 }
-.greyButton:hover{
+
+.greyButton:hover {
     color: #333;
     border: 2px solid #ccc;
     background: #ccc;
@@ -134,13 +135,15 @@ p, text {
     color: black;
     font-weight: 200;
     bottom: 50%;
-    right: -50% ;
+    right: -50%;
     white-space: nowrap;
 }
+
 .verticalLeft .txt span,
 .verticalRight .txt span {
     white-space: nowrap;
 }
+
 .ServiceBeginBlock {
     display: flex;
     width: 100%;
@@ -183,16 +186,30 @@ p, text {
 }
 
 .serviceBlockBoxHead span,
-.serviceBlockBoxText span{
+.serviceBlockBoxText span {
     color: #000 !important;
 }
 
+@media only screen and (max-width: 991px) {
+    html {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+}
+
 @media only screen and (max-width: 440px) {
-    .ServiceBeginBlock .content{
+    .ServiceBeginBlock .content {
         width: 90%;
         margin: 8%;
     }
-    .ServiceBeginBlock .img{
+
+    .ServiceBeginBlock .img {
         top: 0%;
     }
 }
