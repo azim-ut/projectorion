@@ -1,5 +1,6 @@
 <template>
-  <span class="bundleContent" :id="id" style="background: transparent" @click="toggleEditMode()">{{ getText() }}<div  @click="displayPopup()" class="modify" v-if="showModifyButton">Edit</div></span>
+  <span class="bundleContent" :id="id" style="background: transparent" @click="toggleEditMode()">{{ getText() }}<div
+    @click="displayPopup()" class="modify" v-if="showModifyButton">Edit</div></span>
 </template>
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex'
@@ -23,20 +24,22 @@ export default {
     }
   },
   mounted() {
-    let target = window.document.querySelectorAll("#" + this.id)
+    let target = window.document.querySelectorAll('#' + this.id)
 
     // this.$store.dispatch('translate/fetch')
   },
   beforeMount() {
-    let exists = window.document.querySelectorAll("#" + this.id).length
-    if(exists > 0){
-      this.id += "_" + (exists)
+    let exists = window.document.querySelectorAll('#' + this.id).length
+    if (exists > 0) {
+      this.id += '_' + (exists)
     }
     // this.$store.dispatch('translate/fetch')
   },
   methods: {
     toggleEditMode() {
-      this.showModifyButton = !this.showModifyButton
+      if (this.user) {
+        this.showModifyButton = !this.showModifyButton
+      }
     },
     releaseCount() {
       window.console.log('release')
@@ -81,10 +84,11 @@ export default {
 </script>
 
 <style>
-.bundleContent{
+.bundleContent {
   position: relative;
 }
-.bundleContent .modify{
+
+.bundleContent .modify {
   background: #ccc;
   padding: 5px 8px;
   border-radius: 15px 15px 15px 0;
@@ -98,7 +102,8 @@ export default {
   text-decoration: none;
   cursor: pointer;
 }
-.bundleContent .modify:hover{
+
+.bundleContent .modify:hover {
   background: #333;
   color: #fff;
 }

@@ -17,7 +17,7 @@
     <div class="verticalCenter mainBannerContent" style="width: 100%;">
       <div :class="$props.content?'content':'content short'" v-if="showContent">
         <div class="mainContent" v-if="$props.content">
-          <p class="h3"><Bundle :target="'ENG_COMPANY'"/></p>
+          <p class="h3"><Bundle :auth="true" :target="'ENG_COMPANY'"/></p>
           <br/>
           <p class="h4"><Bundle :target="'MAIN_P1'"/></p>
           <p class="h4"><Bundle :target="'MAIN_P2'"/></p>
