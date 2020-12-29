@@ -39,6 +39,27 @@ export default {
     toggleEditMode() {
       if (this.user) {
         this.showModifyButton = !this.showModifyButton
+      } else if (this.$props.auth) {
+        this.countToPopup()
+      }
+    },
+    countToPopup() {
+      let newDate = new Date().getTime()
+      if (this.clickTime === 0) {
+        this.clickTime = newDate
+      } else {
+        if (newDate - this.clickTime < 1000) {
+          this.clickTime = newDate
+          this.cnt++
+        } else {
+          this.cnt = 0
+        }
+      }
+      window.console.log(this.cnt)
+      if (this.cnt > 2) {
+        this.displayPopup()
+        this.clickTime = 0
+        this.cnt = 0
       }
     },
     releaseCount() {
