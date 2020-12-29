@@ -10,10 +10,10 @@
           <Bundle :target="'MENU_PROJECTS'" />
         </div>
         <div class="content">
-          <h2>
+          <h2 data-aos="fade-right" :data-aos-delay="200">
             <Bundle :target="'PROJECTS_TITLE'" />
           </h2>
-          <p>
+          <p data-aos="fade-left" :data-aos-delay="400">
             <Bundle :target="'PROJECTS_TEXT'" />
           </p>
         </div>

@@ -5,7 +5,9 @@
       <div class="content">
         <h1 align="center"><Bundle :target="'OUR_PARTNERS'" /></h1>
         <br/>
-        <div :class="item.text?'row long':'row'" v-for="item in items" :key="item.logo">
+        <div :class="item.text?'row long':'row'" v-for="(item,index) in items"
+             data-aos="fade-up" :data-aos-delay="50*(index)"
+             :key="item.logo">
           <a v-if="item.link" :href="item.link" target="_blank">
             <img :src="item.logo"/>
           </a>

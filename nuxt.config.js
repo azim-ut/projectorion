@@ -4,7 +4,6 @@ export default {
   generate: {
     dir: 'www'
   },
-
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
@@ -25,12 +24,16 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '~/assets/css/main.css',
-    '~/assets/css/manage.css',
+    '~/assets/css/manage.css'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
-
+  plugins: [
+    { src: '@/plugins/aos', mode: 'client' }
+  ],
+  purgeCSS: {
+    whitelist: ["aos-init", "aos-animate", "data-aos-delay", "data-aos-duration", "fade-up", "zoom-in"]
+  },
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
@@ -47,11 +50,9 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     // 'bootstrap-vue/nuxt'
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    '@nuxtjs/axios'
     // https://go.nuxtjs.dev/pwa
     //'@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content'
   ],
   proxy: {
     '/core': {
@@ -77,12 +78,6 @@ export default {
   build: {},
 
   render: {
-    bundleRenderer: {
-      directives: {
-        txt: function(vnode, dir) {
-          window.console.log(123, dir)
-        }
-      }
-    }
+    bundleRenderer: {}
   }
 }

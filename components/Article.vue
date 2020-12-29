@@ -1,6 +1,7 @@
 <template>
-  <span class="bundleContent" :id="id" style="background: transparent" @click="toggleEditMode()">{{ getText() }}<div
-    @click="displayPopup()" class="modify" v-if="showModifyButton">Edit</div></span>
+  <div class="articleContent" :id="id" style="background: transparent" @click="toggleEditMode()">{{ getText() }}
+    <div @click="displayPopup()" class="modify" v-if="showModifyButton">Edit</div>
+  </div>
 </template>
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex'
@@ -109,11 +110,11 @@ export default {
 </script>
 
 <style>
-.bundleContent {
+.articleContent {
   position: relative;
 }
 
-.bundleContent .modify {
+.articleContent .modify {
   background: #ccc;
   padding: 5px 8px;
   border-radius: 15px 15px 15px 0;
@@ -128,7 +129,7 @@ export default {
   cursor: pointer;
 }
 
-.bundleContent .modify:hover {
+.articleContent .modify:hover {
   background: #333;
   color: #fff;
 }

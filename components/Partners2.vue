@@ -1,10 +1,10 @@
 <template>
   <div class="Partners2Block contentBlock">
-    <div class="verticalLeft">
+    <div class="verticalLeft" data-aos="fade-up">
       <div class="txt"><Bundle :target="'ENG_COMPANY'" /></div>
     </div>
     <div class="verticalCenter Partners2">
-      <div class="content">
+      <div class="content" data-aos="fade-down">
         <h2 class="semibold"><Bundle :target="'ENG_COMPANY'" /></h2>
         <h1 class="semibold redText"><Bundle :target="'COMPANY_NAME_EN'" /></h1>
         <p><Bundle :target="'PARTNER2_TEXT_1'" /></p>

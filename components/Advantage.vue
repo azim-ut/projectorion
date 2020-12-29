@@ -4,7 +4,7 @@
 
     <div class="verticalCenter">
       <div class="content">
-        <div class="pre">
+        <div class="pre" data-aos="fade-top">
           <h1>
             <Bundle :target="'ADVANTAGE_HEAD'" />
           </h1>
@@ -13,7 +13,7 @@
           </p>
         </div>
         <div class="why_we">
-          <div class="whyRow" v-for="item in items" :key="item.title">
+          <div class="whyRow" v-for="(item,index) in items" :key="item.title" data-aos="fade-up" :data-aos-delay="50*(index)">
             <img :src="item.image" />
             <div class="text">
               <h3><Bundle :target="item.title" /></h3>

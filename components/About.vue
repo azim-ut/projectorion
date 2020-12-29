@@ -6,9 +6,8 @@
         <div class="dotTitle">
           <img src="/img/point.png" /> <Bundle :target="'MENU_ABOUT'"/>
         </div>
-
         <p class="head"><Bundle :target="'ABOUT_HEAD'"/></p>
-        <p><Bundle :target="'ABOUT_TEXT'"/></p>
+        <p><Article :target="'ABOUT_TEXT'"/></p>
       </div>
     </div>
     <div class="verticalRight">&nbsp;</div>

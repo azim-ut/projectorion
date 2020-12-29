@@ -1,13 +1,13 @@
 <template>
   <div class="keyBlock contentBlock">
-    <div class="verticalLeft">
+    <div class="verticalLeft" data-aos="fade-up">
       <div class="txt">
         <Bundle :target="'KEY_TITLE'" />
       </div>
     </div>
     <div class="verticalCenter">
-      <div class="img"></div>
-      <div class="content">
+      <div class="img" data-aos="fade-right"></div>
+      <div class="content" data-aos="fade-left">
         <p class="head">
           <Bundle :target="'KEY_HEAD'" />
         </p>

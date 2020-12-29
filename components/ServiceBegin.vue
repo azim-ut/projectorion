@@ -1,14 +1,14 @@
 <template>
   <div class="ServiceBeginBlock contentBlock">
-    <div class="img"></div>
+    <div class="img" data-aos="fade-left"></div>
     <div class="verticalLeft"></div>
     <div class="verticalCenter">
       <div class="content">
-        <div class="dotTitle">
+        <div class="dotTitle" data-aos="fade-right">
           <img src="/img/point.png" /> <Bundle :target="'MENU_SERVICES'" />
         </div>
-        <p class="head"><Bundle :target="'SERVICES_TITLE'" /></p>
-        <p class="service_text1 h5 font-sm-weight-light font-weight-lighter align-baseline p-3"><Bundle :target="'SERVICES_TEXT'" /></p>
+        <p class="head" data-aos="fade-right"><Bundle :target="'SERVICES_TITLE'" /></p>
+        <p data-aos="fade-right"><Bundle :target="'SERVICES_TEXT'" /></p>
       </div>
     </div>
   </div>

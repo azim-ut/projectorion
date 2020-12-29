@@ -2,8 +2,8 @@
   <div class="ServiceBlock contentBlock">
     <div class="verticalLeft"></div>
     <div class="content">
-      <a href="/world" v-for="item in items" :key="item.icon">
-        <div :class="(item.wild?'wild':'serviceBlockBox') + ' box'">
+      <a href="/world" v-for="(item,index) in items" :key="item.icon">
+        <div :class="(item.wild?'wild':'serviceBlockBox') + ' box'" data-aos="fade-left" :data-aos-delay="50*(index)">
           <div class="iconBlock">
             <div class="icon"><img :src="item.icon" /></div>
           </div>

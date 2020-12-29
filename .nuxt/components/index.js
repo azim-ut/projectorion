@@ -1,6 +1,7 @@
 export { default as About } from '../..\\components\\About.vue'
 export { default as AboutPart } from '../..\\components\\AboutPart.vue'
 export { default as Advantage } from '../..\\components\\Advantage.vue'
+export { default as Article } from '../..\\components\\Article.vue'
 export { default as AuthManage } from '../..\\components\\AuthManage.vue'
 export { default as Bundle } from '../..\\components\\Bundle.vue'
 export { default as BundleManage } from '../..\\components\\BundleManage.vue'
@@ -20,6 +21,7 @@ export { default as Services } from '../..\\components\\Services.vue'
 export const LazyAbout = import('../..\\components\\About.vue' /* webpackChunkName: "components_About" */).then(c => c.default || c)
 export const LazyAboutPart = import('../..\\components\\AboutPart.vue' /* webpackChunkName: "components_AboutPart" */).then(c => c.default || c)
 export const LazyAdvantage = import('../..\\components\\Advantage.vue' /* webpackChunkName: "components_Advantage" */).then(c => c.default || c)
+export const LazyArticle = import('../..\\components\\Article.vue' /* webpackChunkName: "components_Article" */).then(c => c.default || c)
 export const LazyAuthManage = import('../..\\components\\AuthManage.vue' /* webpackChunkName: "components_AuthManage" */).then(c => c.default || c)
 export const LazyBundle = import('../..\\components\\Bundle.vue' /* webpackChunkName: "components_Bundle" */).then(c => c.default || c)
 export const LazyBundleManage = import('../..\\components\\BundleManage.vue' /* webpackChunkName: "components_BundleManage" */).then(c => c.default || c)

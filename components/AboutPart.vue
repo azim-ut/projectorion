@@ -2,11 +2,11 @@
   <div class="AboutPartBlock contentBlock">
     <div class="verticalLeft"></div>
     <div class="verticalCenter">
-      <div class="content">
+      <div class="content" data-aos="fade-right">
         <p class="head"><Bundle :target="'ABOUT_PART_HEAD'" /></p>
         <p><Bundle :target="'ABOUT_PART_TEXT'" /></p>
       </div>
-      <div class="img"></div>
+      <div class="img" data-aos="fade-left"></div>
     </div>
   </div>
 </template>

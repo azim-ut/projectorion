@@ -1,10 +1,10 @@
 <template>
   <div class="ConsultationBlock contentBlock">
-    <div class="verticalLeft">
+    <div class="verticalLeft" data-aos="fade-up">
       <div class="txt" style="text-transform: uppercase"><Bundle :target="'FREE_CONSULTATION'"/></div>
     </div>
     <div class="verticalCenter">
-      <div class="content" id="cons">
+      <div class="content" id="cons"  data-aos="fade-up">
         <h3 style="text-transform: uppercase"><Bundle :target="'FREE_CONSULTATION'"/></h3>
         <br />
         <p>по телефону:<a href="tel:88005503193" style=" color: #fff; font-size: 2.2em;"> <Bundle :target="'PHONE'"/></a> <Bundle :target="'OR_FORM'"/> </p>
@@ -78,7 +78,7 @@ export default {
 }
 
 .ConsultationBlock .content input {
-  color: #000;
+  color: #000; background: #fff;
 }
 
 .ConsultationBlock .content p {

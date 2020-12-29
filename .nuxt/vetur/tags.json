@@ -17,6 +17,12 @@
   "LazyAdvantage": {
     "description": "Auto imported from components/Advantage.vue"
   },
+  "Article": {
+    "description": "Auto imported from components/Article.vue"
+  },
+  "LazyArticle": {
+    "description": "Auto imported from components/Article.vue"
+  },
   "AuthManage": {
     "description": "Auto imported from components/AuthManage.vue"
   },

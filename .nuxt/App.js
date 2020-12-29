@@ -9,8 +9,6 @@ import '..\\assets\\css\\main.css'
 
 import '..\\assets\\css\\manage.css'
 
-import '..\\node_modules\\prismjs\\themes\\prism.css'
-
 import _6f6c098b from '..\\layouts\\default.vue'
 import _2d280385 from '..\\layouts\\page.vue'
 
