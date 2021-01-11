@@ -211,7 +211,7 @@ export default {
   }
 
   #HeadMenu .fullLogo{
-    width: 300px;
+    width: 300px; margin: auto;
   }
 
   #HeadMenu nav {
