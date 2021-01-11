@@ -33,7 +33,7 @@ export default {
 .About .content {
   background: #fafafa;
   max-width: 500px;
-  padding: 4% 10% 4% 0;
+  padding: 1% 10% 4% 0;
 }
 
 .About .content p{
